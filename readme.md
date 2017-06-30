@@ -18,6 +18,5 @@
 
 #### example
 
-    | table_add | L3 | 128 | 1010101010 | ffffffff | 4 | aabbccddeeff | 112233445566 | 8888
-    | table_add | L3 | 20  | 10101010   | ffffffff | 4 | aabbccddeeff | 112233445566 | 8888
-
+    | table_add | L3    | 20 | 10101010     | ffffffff     | 4 | aabbccddeeff | 112233445566 | 8888
+    | table_add | pppL2 | 1f | 123456123456 | ffffffffffff | 5 | 2            | 001          | 002
