@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddEntry	commands.h	/^    int AddEntry(char * com[10]){$/;"	f	struct:Command
+CharToHex	commands.h	/^    uint8_t CharToHex(char ch){$/;"	f	struct:Command
+Command	commands.h	/^struct Command{$/;"	s
+FlowEntry	defination.h	/^}FlowEntry;$/;"	t	typeref:struct:flow_entry_len
+Init	commands.h	/^    int Init(){$/;"	f	struct:Command
+MAX_DEPTH	defination.h	8;"	d
+MAX_LINE_LEN	defination.h	7;"	d
+ModifyCommands	commands.h	/^void ModifyCommands(char * com,int tos){$/;"	f
+OperationName	defination.h	/^const char* OperationName[3] = {"nop","table_add","table_del"};$/;"	v
+ReadCommandFile	commands.h	/^int ReadCommandFile(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
+TABLE_DEPTH	defination.h	6;"	d
+TableAddr	defination.h	/^const uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};$/;"	v
+TableInfor	commands.h	/^    FlowEntry TableInfor[5];$/;"	m	struct:Command
+TableInforInit	commands.h	/^    int TableInforInit(){$/;"	f	struct:Command
+TableName	defination.h	/^const char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};$/;"	v
+TransferCommands	commands.h	/^int TransferCommands(char *Commands[MAX_DEPTH],int line_num){$/;"	f
+flow_entry_len	defination.h	/^typedef struct flow_entry_len{$/;"	s
+id	commands.h	/^    enum ofp_exp_tb_match_type id;$/;"	m	struct:Command	typeref:enum:Command::ofp_exp_tb_match_type
+key	commands.h	/^    uint32_t key[10];$/;"	m	struct:Command
+key_len	defination.h	/^    int key_len[5];   \/\/bit$/;"	m	struct:flow_entry_len
+key_num	defination.h	/^    int key_num;$/;"	m	struct:flow_entry_len
+main	main.cpp	/^int main(){$/;"	f
+mask	commands.h	/^    uint32_t mask[10];$/;"	m	struct:Command
+nop	defination.h	/^    nop             = 0,$/;"	e	enum:table_operation
+ofp_exp_tb_match_type	defination.h	/^enum ofp_exp_tb_match_type {$/;"	g
+op	commands.h	/^    enum table_operation op;$/;"	m	struct:Command	typeref:enum:Command::table_operation
+priority	commands.h	/^    uint16_t priority;$/;"	m	struct:Command
+show	commands.h	/^    void show(){$/;"	f	struct:Command
+table_add	defination.h	/^    table_add       = 1,$/;"	e	enum:table_operation
+table_del	defination.h	/^    table_del       = 2,$/;"	e	enum:table_operation
+table_operation	defination.h	/^enum table_operation{$/;"	g
+tb_match_Domain	defination.h	/^    tb_match_Domain     = 1,$/;"	e	enum:ofp_exp_tb_match_type
+tb_match_L3	defination.h	/^    tb_match_L3         = 2,$/;"	e	enum:ofp_exp_tb_match_type
+tb_match_QinQ	defination.h	/^    tb_match_QinQ       = 0,$/;"	e	enum:ofp_exp_tb_match_type
+tb_match_extL2	defination.h	/^    tb_match_extL2      = 4,$/;"	e	enum:ofp_exp_tb_match_type
+tb_match_pppL2	defination.h	/^    tb_match_pppL2      = 3,$/;"	e	enum:ofp_exp_tb_match_type
+value	commands.h	/^    uint32_t value[10];$/;"	m	struct:Command
+value_len	defination.h	/^    int value_len[5]; \/\/bit$/;"	m	struct:flow_entry_len
+value_num	defination.h	/^    int value_num;$/;"	m	struct:flow_entry_len
