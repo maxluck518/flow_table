@@ -4,34 +4,1371 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-AddEntry	commands.h	/^    int AddEntry(char * com[10]){$/;"	f	struct:Command
-CharToHex	commands.h	/^    uint8_t CharToHex(char ch){$/;"	f	struct:Command
-Command	commands.h	/^struct Command{$/;"	s
+ADDRESS_DELTA	lib/common/nf2.h	465;"	d
+AUX_LINK_STATUS_POS	lib/common/nf2.h	470;"	d
+AddEntry	commands.c	/^int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){$/;"	f
+AddTcamFlowEntry	tcam_flow_entry.c	/^int AddTcamFlowEntry(Command * entry){$/;"	f
+BOARD_ID	lib/common/nf2.h	195;"	d
+BOARD_ID_CONTROL	lib/common/nf2.h	196;"	d
+BRAM_OQ_DISABLE_QUEUES_REG	lib/common/reg_defines.h	919;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_0_REG	lib/common/reg_defines.h	897;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_1_REG	lib/common/reg_defines.h	900;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_2_REG	lib/common/reg_defines.h	903;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_3_REG	lib/common/reg_defines.h	906;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_4_REG	lib/common/reg_defines.h	909;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_5_REG	lib/common/reg_defines.h	912;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_6_REG	lib/common/reg_defines.h	915;"	d
+BRAM_OQ_NUM_PKTS_DROPPED_7_REG	lib/common/reg_defines.h	918;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_0_REG	lib/common/reg_defines.h	896;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_1_REG	lib/common/reg_defines.h	899;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_2_REG	lib/common/reg_defines.h	902;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_3_REG	lib/common/reg_defines.h	905;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_4_REG	lib/common/reg_defines.h	908;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_5_REG	lib/common/reg_defines.h	911;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_6_REG	lib/common/reg_defines.h	914;"	d
+BRAM_OQ_NUM_PKTS_RECEIVED_7_REG	lib/common/reg_defines.h	917;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_0_REG	lib/common/reg_defines.h	895;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_1_REG	lib/common/reg_defines.h	898;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_2_REG	lib/common/reg_defines.h	901;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_3_REG	lib/common/reg_defines.h	904;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_4_REG	lib/common/reg_defines.h	907;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_5_REG	lib/common/reg_defines.h	910;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_6_REG	lib/common/reg_defines.h	913;"	d
+BRAM_OQ_NUM_PKT_BYTES_RECEIVED_7_REG	lib/common/reg_defines.h	916;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_0_REG	lib/common/reg_defines.h	920;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_1_REG	lib/common/reg_defines.h	921;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_2_REG	lib/common/reg_defines.h	922;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_3_REG	lib/common/reg_defines.h	923;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_4_REG	lib/common/reg_defines.h	924;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_5_REG	lib/common/reg_defines.h	925;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_6_REG	lib/common/reg_defines.h	926;"	d
+BRAM_OQ_NUM_WORDS_IN_QUEUE_7_REG	lib/common/reg_defines.h	927;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CC	lib/common/Makefile	/^CC = arm-xilinx-linux-gnueabi-gcc$/;"	m
+CC	lib/reg_lib/Makefile	/^CC = gcc$/;"	m
+CFLAGS	lib/reg_lib/Makefile	/^CFLAGS = -g$/;"	m
+CHECK_REQ	lib/reg_lib/reg_proxy.h	65;"	d
+CLK_SYN_0_COUNTER_RESET	lib/common/reg_defines.h	367;"	d
+CLK_SYN_0_RX_HI_REG	lib/common/reg_defines.h	371;"	d
+CLK_SYN_0_RX_LO_REG	lib/common/reg_defines.h	370;"	d
+CLK_SYN_0_TX_HI_REG	lib/common/reg_defines.h	369;"	d
+CLK_SYN_0_TX_LO_REG	lib/common/reg_defines.h	368;"	d
+CLK_SYN_1_COUNTER_RESET	lib/common/reg_defines.h	372;"	d
+CLK_SYN_1_RX_HI_REG	lib/common/reg_defines.h	376;"	d
+CLK_SYN_1_RX_LO_REG	lib/common/reg_defines.h	375;"	d
+CLK_SYN_1_TX_HI_REG	lib/common/reg_defines.h	374;"	d
+CLK_SYN_1_TX_LO_REG	lib/common/reg_defines.h	373;"	d
+CLK_SYN_2_COUNTER_RESET	lib/common/reg_defines.h	377;"	d
+CLK_SYN_2_RX_HI_REG	lib/common/reg_defines.h	381;"	d
+CLK_SYN_2_RX_LO_REG	lib/common/reg_defines.h	380;"	d
+CLK_SYN_2_TX_HI_REG	lib/common/reg_defines.h	379;"	d
+CLK_SYN_2_TX_LO_REG	lib/common/reg_defines.h	378;"	d
+CLK_SYN_3_COUNTER_RESET	lib/common/reg_defines.h	382;"	d
+CLK_SYN_3_RX_HI_REG	lib/common/reg_defines.h	386;"	d
+CLK_SYN_3_RX_LO_REG	lib/common/reg_defines.h	385;"	d
+CLK_SYN_3_TX_HI_REG	lib/common/reg_defines.h	384;"	d
+CLK_SYN_3_TX_LO_REG	lib/common/reg_defines.h	383;"	d
+CLK_TEST_TICKS_REG	lib/common/reg_defines.h	533;"	d
+CLOSE_REQ	lib/reg_lib/reg_proxy.h	67;"	d
+CNET_ENABLE_DEBUG_TRISTATE	lib/common/nf2.h	301;"	d
+CNET_ENABLE_INGRESS_ARBITER	lib/common/nf2.h	302;"	d
+CNET_ENABLE_RX_DMA	lib/common/nf2.h	303;"	d
+CNET_ENABLE_RX_FIFO	lib/common/nf2.h	291;"	d
+CNET_ENABLE_RX_FIFO_0	lib/common/nf2.h	295;"	d
+CNET_ENABLE_RX_FIFO_1	lib/common/nf2.h	294;"	d
+CNET_ENABLE_RX_FIFO_2	lib/common/nf2.h	293;"	d
+CNET_ENABLE_RX_FIFO_3	lib/common/nf2.h	292;"	d
+CNET_ENABLE_TX_MAC	lib/common/nf2.h	296;"	d
+CNET_ENABLE_TX_MAC_0	lib/common/nf2.h	300;"	d
+CNET_ENABLE_TX_MAC_1	lib/common/nf2.h	299;"	d
+CNET_ENABLE_TX_MAC_2	lib/common/nf2.h	298;"	d
+CNET_ENABLE_TX_MAC_3	lib/common/nf2.h	297;"	d
+CNET_ERROR_TX_OVERRUN_MAC	lib/common/nf2.h	284;"	d
+CNET_ERROR_TX_OVERRUN_MAC_0	lib/common/nf2.h	288;"	d
+CNET_ERROR_TX_OVERRUN_MAC_1	lib/common/nf2.h	287;"	d
+CNET_ERROR_TX_OVERRUN_MAC_2	lib/common/nf2.h	286;"	d
+CNET_ERROR_TX_OVERRUN_MAC_3	lib/common/nf2.h	285;"	d
+CNET_ERROR_TX_UNDERRUN_MAC	lib/common/nf2.h	279;"	d
+CNET_ERROR_TX_UNDERRUN_MAC_0	lib/common/nf2.h	283;"	d
+CNET_ERROR_TX_UNDERRUN_MAC_1	lib/common/nf2.h	282;"	d
+CNET_ERROR_TX_UNDERRUN_MAC_2	lib/common/nf2.h	281;"	d
+CNET_ERROR_TX_UNDERRUN_MAC_3	lib/common/nf2.h	280;"	d
+CNET_MAC_CFG_1000_MBPS	lib/common/nf2.h	320;"	d
+CNET_MAC_CFG_100_MBPS	lib/common/nf2.h	321;"	d
+CNET_MAC_CFG_10_MBPS	lib/common/nf2.h	322;"	d
+CNET_MAC_CFG_FULL_DUPLEX	lib/common/nf2.h	314;"	d
+CNET_MAC_CFG_JUMBO_ENABLE	lib/common/nf2.h	317;"	d
+CNET_MAC_CFG_RX_WANT_FCS	lib/common/nf2.h	316;"	d
+CNET_MAC_CFG_SPEED	lib/common/nf2.h	319;"	d
+CNET_MAC_CFG_TX_FCS_SUPPLIED	lib/common/nf2.h	315;"	d
+CNET_MAC_CLK_CHK_CNT_VALUE	lib/common/nf2.h	177;"	d
+CNET_MAC_CLK_CHK_CTRL	lib/common/nf2.h	176;"	d
+CNET_MF_STATUS_RX_FIFO_EMPTY	lib/common/nf2.h	306;"	d
+CNET_MF_STATUS_RX_NUM_PKTS	lib/common/nf2.h	308;"	d
+CNET_MF_STATUS_RX_PKT_AVAIL	lib/common/nf2.h	307;"	d
+CNET_MF_STATUS_TX_FIFO_FULL	lib/common/nf2.h	309;"	d
+CNET_MF_STATUS_TX_FIFO_NO_MAX_PKT	lib/common/nf2.h	310;"	d
+CNET_MF_STATUS_TX_NUM_PKTS	lib/common/nf2.h	311;"	d
+CNET_REG_BASE	lib/common/nf2.h	93;"	d
+CNET_REG_CTRL	lib/common/nf2.h	118;"	d
+CNET_REG_ENABLE	lib/common/nf2.h	121;"	d
+CNET_REG_ERROR	lib/common/nf2.h	120;"	d
+CNET_REG_ID	lib/common/nf2.h	117;"	d
+CNET_REG_MAC_CONFIG_0	lib/common/nf2.h	130;"	d
+CNET_REG_MAC_CONFIG_1	lib/common/nf2.h	135;"	d
+CNET_REG_MAC_CONFIG_2	lib/common/nf2.h	140;"	d
+CNET_REG_MAC_CONFIG_3	lib/common/nf2.h	145;"	d
+CNET_REG_MF_RX_GOOD_BYTES_RCVD_0	lib/common/nf2.h	158;"	d
+CNET_REG_MF_RX_GOOD_BYTES_RCVD_1	lib/common/nf2.h	163;"	d
+CNET_REG_MF_RX_GOOD_BYTES_RCVD_2	lib/common/nf2.h	168;"	d
+CNET_REG_MF_RX_GOOD_BYTES_RCVD_3	lib/common/nf2.h	173;"	d
+CNET_REG_MF_RX_GOOD_PKTS_RCVD_0	lib/common/nf2.h	157;"	d
+CNET_REG_MF_RX_GOOD_PKTS_RCVD_1	lib/common/nf2.h	162;"	d
+CNET_REG_MF_RX_GOOD_PKTS_RCVD_2	lib/common/nf2.h	167;"	d
+CNET_REG_MF_RX_GOOD_PKTS_RCVD_3	lib/common/nf2.h	172;"	d
+CNET_REG_MF_RX_PKTS_LOST_0	lib/common/nf2.h	129;"	d
+CNET_REG_MF_RX_PKTS_LOST_1	lib/common/nf2.h	134;"	d
+CNET_REG_MF_RX_PKTS_LOST_2	lib/common/nf2.h	139;"	d
+CNET_REG_MF_RX_PKTS_LOST_3	lib/common/nf2.h	144;"	d
+CNET_REG_MF_RX_PKTS_LOST_BAD_FCS_0	lib/common/nf2.h	155;"	d
+CNET_REG_MF_RX_PKTS_LOST_BAD_FCS_1	lib/common/nf2.h	160;"	d
+CNET_REG_MF_RX_PKTS_LOST_BAD_FCS_2	lib/common/nf2.h	165;"	d
+CNET_REG_MF_RX_PKTS_LOST_BAD_FCS_3	lib/common/nf2.h	170;"	d
+CNET_REG_MF_RX_PKTS_LOST_FULL_FIFO_0	lib/common/nf2.h	156;"	d
+CNET_REG_MF_RX_PKTS_LOST_FULL_FIFO_1	lib/common/nf2.h	161;"	d
+CNET_REG_MF_RX_PKTS_LOST_FULL_FIFO_2	lib/common/nf2.h	166;"	d
+CNET_REG_MF_RX_PKTS_LOST_FULL_FIFO_3	lib/common/nf2.h	171;"	d
+CNET_REG_MF_RX_PKTS_RCVD_0	lib/common/nf2.h	128;"	d
+CNET_REG_MF_RX_PKTS_RCVD_1	lib/common/nf2.h	133;"	d
+CNET_REG_MF_RX_PKTS_RCVD_2	lib/common/nf2.h	138;"	d
+CNET_REG_MF_RX_PKTS_RCVD_3	lib/common/nf2.h	143;"	d
+CNET_REG_MF_STATUS_0	lib/common/nf2.h	126;"	d
+CNET_REG_MF_STATUS_1	lib/common/nf2.h	131;"	d
+CNET_REG_MF_STATUS_2	lib/common/nf2.h	136;"	d
+CNET_REG_MF_STATUS_3	lib/common/nf2.h	141;"	d
+CNET_REG_MF_TX_BYTES_SENT_0	lib/common/nf2.h	159;"	d
+CNET_REG_MF_TX_BYTES_SENT_1	lib/common/nf2.h	164;"	d
+CNET_REG_MF_TX_BYTES_SENT_2	lib/common/nf2.h	169;"	d
+CNET_REG_MF_TX_BYTES_SENT_3	lib/common/nf2.h	174;"	d
+CNET_REG_MF_TX_PKTS_SENT_0	lib/common/nf2.h	127;"	d
+CNET_REG_MF_TX_PKTS_SENT_1	lib/common/nf2.h	132;"	d
+CNET_REG_MF_TX_PKTS_SENT_2	lib/common/nf2.h	137;"	d
+CNET_REG_MF_TX_PKTS_SENT_3	lib/common/nf2.h	142;"	d
+CNET_REG_RD_SRAM1_EOP	lib/common/nf2.h	123;"	d
+CNET_REG_RD_SRAM2_EOP	lib/common/nf2.h	125;"	d
+CNET_REG_RESET	lib/common/nf2.h	119;"	d
+CNET_REG_RXQ_NUM_PKTS_0	lib/common/nf2.h	146;"	d
+CNET_REG_RXQ_NUM_PKTS_1	lib/common/nf2.h	148;"	d
+CNET_REG_RXQ_NUM_PKTS_2	lib/common/nf2.h	150;"	d
+CNET_REG_RXQ_NUM_PKTS_3	lib/common/nf2.h	152;"	d
+CNET_REG_RXQ_POINTERS_0	lib/common/nf2.h	147;"	d
+CNET_REG_RXQ_POINTERS_1	lib/common/nf2.h	149;"	d
+CNET_REG_RXQ_POINTERS_2	lib/common/nf2.h	151;"	d
+CNET_REG_RXQ_POINTERS_3	lib/common/nf2.h	153;"	d
+CNET_REG_WR_SRAM1_EOP	lib/common/nf2.h	122;"	d
+CNET_REG_WR_SRAM2_EOP	lib/common/nf2.h	124;"	d
+CNET_RESET_MAC	lib/common/nf2.h	272;"	d
+CNET_RESET_MAC_0	lib/common/nf2.h	276;"	d
+CNET_RESET_MAC_1	lib/common/nf2.h	275;"	d
+CNET_RESET_MAC_2	lib/common/nf2.h	274;"	d
+CNET_RESET_MAC_3	lib/common/nf2.h	273;"	d
+CNET_RXQ_RD_PTR	lib/common/nf2.h	325;"	d
+CNET_RXQ_WR_PTR	lib/common/nf2.h	324;"	d
+COMMON	lib/reg_lib/Makefile	/^COMMON = ..\/common$/;"	m
+CPCI_BOARD_ID_REG	lib/common/reg_defines.h	49;"	d
+CPCI_CLOCK_CHECK_N_CLK_REG	lib/common/reg_defines.h	83;"	d
+CPCI_CLOCK_CHECK_N_EXP_REG	lib/common/reg_defines.h	85;"	d
+CPCI_CLOCK_CHECK_P_MAX_REG	lib/common/reg_defines.h	84;"	d
+CPCI_CNET_CLK_SEL_REG	lib/common/reg_defines.h	59;"	d
+CPCI_CNET_READ_TIME_DEFAULT	lib/common/reg_defines.h	91;"	d
+CPCI_CNET_READ_TIME_REG	lib/common/reg_defines.h	74;"	d
+CPCI_CNET_REG_READ_CNT_REG	lib/common/reg_defines.h	80;"	d
+CPCI_CNET_REG_WRITE_CNT_REG	lib/common/reg_defines.h	81;"	d
+CPCI_CONTROL_REG	lib/common/reg_defines.h	50;"	d
+CPCI_CPCI_REG_READ_CNT_REG	lib/common/reg_defines.h	78;"	d
+CPCI_CPCI_REG_WRITE_CNT_REG	lib/common/reg_defines.h	79;"	d
+CPCI_CPCI_RESET_COUNTER_REG	lib/common/reg_defines.h	87;"	d
+CPCI_DMA_ADDR_E_REG	lib/common/reg_defines.h	66;"	d
+CPCI_DMA_ADDR_I_REG	lib/common/reg_defines.h	65;"	d
+CPCI_DMA_CTRL_E_REG	lib/common/reg_defines.h	70;"	d
+CPCI_DMA_CTRL_I_REG	lib/common/reg_defines.h	69;"	d
+CPCI_DMA_EGRESS_PKT_CNT_REG	lib/common/reg_defines.h	77;"	d
+CPCI_DMA_INGRESS_PKT_CNT_REG	lib/common/reg_defines.h	76;"	d
+CPCI_DMA_RETRIES_DEFAULT	lib/common/reg_defines.h	90;"	d
+CPCI_DMA_RETRIES_REG	lib/common/reg_defines.h	72;"	d
+CPCI_DMA_SIZE_E_REG	lib/common/reg_defines.h	68;"	d
+CPCI_DMA_SIZE_I_REG	lib/common/reg_defines.h	67;"	d
+CPCI_DMA_XFER_TIME_DEFAULT	lib/common/reg_defines.h	89;"	d
+CPCI_DMA_XFER_TIME_REG	lib/common/reg_defines.h	71;"	d
+CPCI_DUMMY_REG	lib/common/reg_defines.h	54;"	d
+CPCI_ERROR_REG	lib/common/reg_defines.h	52;"	d
+CPCI_ID_REG	lib/common/reg_defines.h	48;"	d
+CPCI_INTERRUPT_MASK_REG	lib/common/reg_defines.h	56;"	d
+CPCI_INTERRUPT_STATUS_REG	lib/common/reg_defines.h	57;"	d
+CPCI_PCI_CLK_COUNTER_REG	lib/common/reg_defines.h	86;"	d
+CPCI_REG_BOARD_ID	lib/common/nf2.h	57;"	d
+CPCI_REG_CNET_MAX_XFER_TIME	lib/common/nf2.h	76;"	d
+CPCI_REG_CNET_REG_RD_CNT	lib/common/nf2.h	81;"	d
+CPCI_REG_CNET_REG_WR_CNT	lib/common/nf2.h	82;"	d
+CPCI_REG_CPCI_REG_RD_CNT	lib/common/nf2.h	79;"	d
+CPCI_REG_CPCI_REG_WR_CNT	lib/common/nf2.h	80;"	d
+CPCI_REG_CTRL	lib/common/nf2.h	58;"	d
+CPCI_REG_DMA_E_ADDR	lib/common/nf2.h	68;"	d
+CPCI_REG_DMA_E_CTRL	lib/common/nf2.h	72;"	d
+CPCI_REG_DMA_E_PKT_CNT	lib/common/nf2.h	78;"	d
+CPCI_REG_DMA_E_SIZE	lib/common/nf2.h	70;"	d
+CPCI_REG_DMA_I_ADDR	lib/common/nf2.h	67;"	d
+CPCI_REG_DMA_I_CTRL	lib/common/nf2.h	71;"	d
+CPCI_REG_DMA_I_PKT_CNT	lib/common/nf2.h	77;"	d
+CPCI_REG_DMA_I_SIZE	lib/common/nf2.h	69;"	d
+CPCI_REG_DMA_MAX_RETRIES	lib/common/nf2.h	75;"	d
+CPCI_REG_DMA_MAX_XFER_TIME	lib/common/nf2.h	74;"	d
+CPCI_REG_DMA_QUEUE_STATUS	lib/common/nf2.h	73;"	d
+CPCI_REG_DUMMY	lib/common/nf2.h	61;"	d
+CPCI_REG_ERROR	lib/common/nf2.h	60;"	d
+CPCI_REG_ID	lib/common/nf2.h	56;"	d
+CPCI_REG_INTERRUPT_MASK	lib/common/nf2.h	62;"	d
+CPCI_REG_INTERRUPT_STATUS	lib/common/nf2.h	63;"	d
+CPCI_REG_N_CLK_COUNT	lib/common/nf2.h	84;"	d
+CPCI_REG_N_EXP	lib/common/nf2.h	86;"	d
+CPCI_REG_PROG_CTRL	lib/common/nf2.h	66;"	d
+CPCI_REG_PROG_DATA	lib/common/nf2.h	64;"	d
+CPCI_REG_PROG_STATUS	lib/common/nf2.h	65;"	d
+CPCI_REG_P_CLK_CTR	lib/common/nf2.h	87;"	d
+CPCI_REG_P_MAX	lib/common/nf2.h	85;"	d
+CPCI_REG_RESET	lib/common/nf2.h	59;"	d
+CPCI_REG_RESET_CTR	lib/common/nf2.h	88;"	d
+CPCI_REPROG_CTRL_REG	lib/common/reg_defines.h	63;"	d
+CPCI_REPROG_DATA_REG	lib/common/reg_defines.h	61;"	d
+CPCI_REPROG_STATUS_REG	lib/common/reg_defines.h	62;"	d
+CPCI_RESET_REG	lib/common/reg_defines.h	51;"	d
+CPU_REG_Q_0_RD_CTRL_WORD_REG	lib/common/reg_defines.h	312;"	d
+CPU_REG_Q_0_RD_DATA_WORD_REG	lib/common/reg_defines.h	311;"	d
+CPU_REG_Q_0_RD_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	314;"	d
+CPU_REG_Q_0_RD_NUM_WORDS_AVAIL_REG	lib/common/reg_defines.h	313;"	d
+CPU_REG_Q_0_RX_NUM_BYTES_RCVD_REG	lib/common/reg_defines.h	319;"	d
+CPU_REG_Q_0_RX_NUM_PKTS_RCVD_REG	lib/common/reg_defines.h	315;"	d
+CPU_REG_Q_0_RX_NUM_WORDS_RCVD_REG	lib/common/reg_defines.h	317;"	d
+CPU_REG_Q_0_TX_NUM_BYTES_SENT_REG	lib/common/reg_defines.h	320;"	d
+CPU_REG_Q_0_TX_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	316;"	d
+CPU_REG_Q_0_TX_NUM_WORDS_SENT_REG	lib/common/reg_defines.h	318;"	d
+CPU_REG_Q_0_WR_CTRL_WORD_REG	lib/common/reg_defines.h	308;"	d
+CPU_REG_Q_0_WR_DATA_WORD_REG	lib/common/reg_defines.h	307;"	d
+CPU_REG_Q_0_WR_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	310;"	d
+CPU_REG_Q_0_WR_NUM_WORDS_LEFT_REG	lib/common/reg_defines.h	309;"	d
+CPU_REG_Q_1_RD_CTRL_WORD_REG	lib/common/reg_defines.h	327;"	d
+CPU_REG_Q_1_RD_DATA_WORD_REG	lib/common/reg_defines.h	326;"	d
+CPU_REG_Q_1_RD_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	329;"	d
+CPU_REG_Q_1_RD_NUM_WORDS_AVAIL_REG	lib/common/reg_defines.h	328;"	d
+CPU_REG_Q_1_RX_NUM_BYTES_RCVD_REG	lib/common/reg_defines.h	334;"	d
+CPU_REG_Q_1_RX_NUM_PKTS_RCVD_REG	lib/common/reg_defines.h	330;"	d
+CPU_REG_Q_1_RX_NUM_WORDS_RCVD_REG	lib/common/reg_defines.h	332;"	d
+CPU_REG_Q_1_TX_NUM_BYTES_SENT_REG	lib/common/reg_defines.h	335;"	d
+CPU_REG_Q_1_TX_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	331;"	d
+CPU_REG_Q_1_TX_NUM_WORDS_SENT_REG	lib/common/reg_defines.h	333;"	d
+CPU_REG_Q_1_WR_CTRL_WORD_REG	lib/common/reg_defines.h	323;"	d
+CPU_REG_Q_1_WR_DATA_WORD_REG	lib/common/reg_defines.h	322;"	d
+CPU_REG_Q_1_WR_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	325;"	d
+CPU_REG_Q_1_WR_NUM_WORDS_LEFT_REG	lib/common/reg_defines.h	324;"	d
+CPU_REG_Q_2_RD_CTRL_WORD_REG	lib/common/reg_defines.h	342;"	d
+CPU_REG_Q_2_RD_DATA_WORD_REG	lib/common/reg_defines.h	341;"	d
+CPU_REG_Q_2_RD_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	344;"	d
+CPU_REG_Q_2_RD_NUM_WORDS_AVAIL_REG	lib/common/reg_defines.h	343;"	d
+CPU_REG_Q_2_RX_NUM_BYTES_RCVD_REG	lib/common/reg_defines.h	349;"	d
+CPU_REG_Q_2_RX_NUM_PKTS_RCVD_REG	lib/common/reg_defines.h	345;"	d
+CPU_REG_Q_2_RX_NUM_WORDS_RCVD_REG	lib/common/reg_defines.h	347;"	d
+CPU_REG_Q_2_TX_NUM_BYTES_SENT_REG	lib/common/reg_defines.h	350;"	d
+CPU_REG_Q_2_TX_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	346;"	d
+CPU_REG_Q_2_TX_NUM_WORDS_SENT_REG	lib/common/reg_defines.h	348;"	d
+CPU_REG_Q_2_WR_CTRL_WORD_REG	lib/common/reg_defines.h	338;"	d
+CPU_REG_Q_2_WR_DATA_WORD_REG	lib/common/reg_defines.h	337;"	d
+CPU_REG_Q_2_WR_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	340;"	d
+CPU_REG_Q_2_WR_NUM_WORDS_LEFT_REG	lib/common/reg_defines.h	339;"	d
+CPU_REG_Q_3_RD_CTRL_WORD_REG	lib/common/reg_defines.h	357;"	d
+CPU_REG_Q_3_RD_DATA_WORD_REG	lib/common/reg_defines.h	356;"	d
+CPU_REG_Q_3_RD_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	359;"	d
+CPU_REG_Q_3_RD_NUM_WORDS_AVAIL_REG	lib/common/reg_defines.h	358;"	d
+CPU_REG_Q_3_RX_NUM_BYTES_RCVD_REG	lib/common/reg_defines.h	364;"	d
+CPU_REG_Q_3_RX_NUM_PKTS_RCVD_REG	lib/common/reg_defines.h	360;"	d
+CPU_REG_Q_3_RX_NUM_WORDS_RCVD_REG	lib/common/reg_defines.h	362;"	d
+CPU_REG_Q_3_TX_NUM_BYTES_SENT_REG	lib/common/reg_defines.h	365;"	d
+CPU_REG_Q_3_TX_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	361;"	d
+CPU_REG_Q_3_TX_NUM_WORDS_SENT_REG	lib/common/reg_defines.h	363;"	d
+CPU_REG_Q_3_WR_CTRL_WORD_REG	lib/common/reg_defines.h	353;"	d
+CPU_REG_Q_3_WR_DATA_WORD_REG	lib/common/reg_defines.h	352;"	d
+CPU_REG_Q_3_WR_NUM_PKTS_IN_Q_REG	lib/common/reg_defines.h	355;"	d
+CPU_REG_Q_3_WR_NUM_WORDS_LEFT_REG	lib/common/reg_defines.h	354;"	d
+CTRL_CNET_RESET	lib/common/nf2.h	199;"	d
+CTRL_LED	lib/common/nf2.h	200;"	d
+CharToHex	commands.c	/^uint8_t CharToHex(char ch){$/;"	f
+Command	commands.h	/^typedef struct Command{$/;"	s
+Command	commands.h	/^}Command;$/;"	t	typeref:struct:Command
+DEFAULT_IFACE	lib/reg_lib/client_test.c	60;"	d	file:
+DEFAULT_IFACE	tcam_flow_entry.h	18;"	d
+DELAY_1ST_WORD_HI_REG	lib/common/reg_defines.h	868;"	d
+DELAY_1ST_WORD_LO_REG	lib/common/reg_defines.h	869;"	d
+DELAY_ENABLE_REG	lib/common/reg_defines.h	867;"	d
+DELAY_LENGTH_REG	lib/common/reg_defines.h	870;"	d
+DEVICE_ADDRESS	lib/common/nf2util.h	41;"	d
+DEVICE_INFO_STR_LEN	lib/common/nf2util.h	40;"	d
+DEVICE_STR_LEN	lib/common/nf2util.h	39;"	d
+DEV_ID_CPCI_ID_REG	lib/common/reg_defines.h	184;"	d
+DEV_ID_DEVICE_ID_REG	lib/common/reg_defines.h	182;"	d
+DEV_ID_MD5SUM_LENGTH	lib/common/reg_defines.h	116;"	d
+DEV_ID_MD5_0_REG	lib/common/reg_defines.h	178;"	d
+DEV_ID_MD5_1_REG	lib/common/reg_defines.h	179;"	d
+DEV_ID_MD5_2_REG	lib/common/reg_defines.h	180;"	d
+DEV_ID_MD5_3_REG	lib/common/reg_defines.h	181;"	d
+DEV_ID_MD5_VALUE_V1	lib/common/reg_defines.h	146;"	d
+DEV_ID_MD5_VALUE_V1_0	lib/common/reg_defines.h	147;"	d
+DEV_ID_MD5_VALUE_V1_1	lib/common/reg_defines.h	148;"	d
+DEV_ID_MD5_VALUE_V1_2	lib/common/reg_defines.h	149;"	d
+DEV_ID_MD5_VALUE_V1_3	lib/common/reg_defines.h	150;"	d
+DEV_ID_MD5_VALUE_V2	lib/common/reg_defines.h	153;"	d
+DEV_ID_MD5_VALUE_V2_0	lib/common/reg_defines.h	154;"	d
+DEV_ID_MD5_VALUE_V2_1	lib/common/reg_defines.h	155;"	d
+DEV_ID_MD5_VALUE_V2_2	lib/common/reg_defines.h	156;"	d
+DEV_ID_MD5_VALUE_V2_3	lib/common/reg_defines.h	157;"	d
+DEV_ID_NON_STR_REGS	lib/common/reg_defines.h	113;"	d
+DEV_ID_NON_STR_REGS_V1	lib/common/reg_defines.h	163;"	d
+DEV_ID_NUM_REGS	lib/common/reg_defines.h	110;"	d
+DEV_ID_NUM_REGS_V1	lib/common/reg_defines.h	160;"	d
+DEV_ID_PROJ_DESC_0_REG	lib/common/reg_defines.h	217;"	d
+DEV_ID_PROJ_DESC_10_REG	lib/common/reg_defines.h	227;"	d
+DEV_ID_PROJ_DESC_11_REG	lib/common/reg_defines.h	228;"	d
+DEV_ID_PROJ_DESC_12_REG	lib/common/reg_defines.h	229;"	d
+DEV_ID_PROJ_DESC_13_REG	lib/common/reg_defines.h	230;"	d
+DEV_ID_PROJ_DESC_14_REG	lib/common/reg_defines.h	231;"	d
+DEV_ID_PROJ_DESC_15_REG	lib/common/reg_defines.h	232;"	d
+DEV_ID_PROJ_DESC_16_REG	lib/common/reg_defines.h	233;"	d
+DEV_ID_PROJ_DESC_17_REG	lib/common/reg_defines.h	234;"	d
+DEV_ID_PROJ_DESC_18_REG	lib/common/reg_defines.h	235;"	d
+DEV_ID_PROJ_DESC_19_REG	lib/common/reg_defines.h	236;"	d
+DEV_ID_PROJ_DESC_1_REG	lib/common/reg_defines.h	218;"	d
+DEV_ID_PROJ_DESC_20_REG	lib/common/reg_defines.h	237;"	d
+DEV_ID_PROJ_DESC_21_REG	lib/common/reg_defines.h	238;"	d
+DEV_ID_PROJ_DESC_22_REG	lib/common/reg_defines.h	239;"	d
+DEV_ID_PROJ_DESC_23_REG	lib/common/reg_defines.h	240;"	d
+DEV_ID_PROJ_DESC_24_REG	lib/common/reg_defines.h	241;"	d
+DEV_ID_PROJ_DESC_2_REG	lib/common/reg_defines.h	219;"	d
+DEV_ID_PROJ_DESC_3_REG	lib/common/reg_defines.h	220;"	d
+DEV_ID_PROJ_DESC_4_REG	lib/common/reg_defines.h	221;"	d
+DEV_ID_PROJ_DESC_5_REG	lib/common/reg_defines.h	222;"	d
+DEV_ID_PROJ_DESC_6_REG	lib/common/reg_defines.h	223;"	d
+DEV_ID_PROJ_DESC_7_REG	lib/common/reg_defines.h	224;"	d
+DEV_ID_PROJ_DESC_8_REG	lib/common/reg_defines.h	225;"	d
+DEV_ID_PROJ_DESC_9_REG	lib/common/reg_defines.h	226;"	d
+DEV_ID_PROJ_DESC_BIT_LEN	lib/common/reg_defines.h	143;"	d
+DEV_ID_PROJ_DESC_BYTE_LEN	lib/common/reg_defines.h	140;"	d
+DEV_ID_PROJ_DESC_WORD_LEN	lib/common/reg_defines.h	137;"	d
+DEV_ID_PROJ_DIR_0_REG	lib/common/reg_defines.h	185;"	d
+DEV_ID_PROJ_DIR_10_REG	lib/common/reg_defines.h	195;"	d
+DEV_ID_PROJ_DIR_11_REG	lib/common/reg_defines.h	196;"	d
+DEV_ID_PROJ_DIR_12_REG	lib/common/reg_defines.h	197;"	d
+DEV_ID_PROJ_DIR_13_REG	lib/common/reg_defines.h	198;"	d
+DEV_ID_PROJ_DIR_14_REG	lib/common/reg_defines.h	199;"	d
+DEV_ID_PROJ_DIR_15_REG	lib/common/reg_defines.h	200;"	d
+DEV_ID_PROJ_DIR_1_REG	lib/common/reg_defines.h	186;"	d
+DEV_ID_PROJ_DIR_2_REG	lib/common/reg_defines.h	187;"	d
+DEV_ID_PROJ_DIR_3_REG	lib/common/reg_defines.h	188;"	d
+DEV_ID_PROJ_DIR_4_REG	lib/common/reg_defines.h	189;"	d
+DEV_ID_PROJ_DIR_5_REG	lib/common/reg_defines.h	190;"	d
+DEV_ID_PROJ_DIR_6_REG	lib/common/reg_defines.h	191;"	d
+DEV_ID_PROJ_DIR_7_REG	lib/common/reg_defines.h	192;"	d
+DEV_ID_PROJ_DIR_8_REG	lib/common/reg_defines.h	193;"	d
+DEV_ID_PROJ_DIR_9_REG	lib/common/reg_defines.h	194;"	d
+DEV_ID_PROJ_DIR_BIT_LEN	lib/common/reg_defines.h	125;"	d
+DEV_ID_PROJ_DIR_BYTE_LEN	lib/common/reg_defines.h	122;"	d
+DEV_ID_PROJ_DIR_WORD_LEN	lib/common/reg_defines.h	119;"	d
+DEV_ID_PROJ_NAME_0_REG	lib/common/reg_defines.h	201;"	d
+DEV_ID_PROJ_NAME_10_REG	lib/common/reg_defines.h	211;"	d
+DEV_ID_PROJ_NAME_11_REG	lib/common/reg_defines.h	212;"	d
+DEV_ID_PROJ_NAME_12_REG	lib/common/reg_defines.h	213;"	d
+DEV_ID_PROJ_NAME_13_REG	lib/common/reg_defines.h	214;"	d
+DEV_ID_PROJ_NAME_14_REG	lib/common/reg_defines.h	215;"	d
+DEV_ID_PROJ_NAME_15_REG	lib/common/reg_defines.h	216;"	d
+DEV_ID_PROJ_NAME_1_REG	lib/common/reg_defines.h	202;"	d
+DEV_ID_PROJ_NAME_2_REG	lib/common/reg_defines.h	203;"	d
+DEV_ID_PROJ_NAME_3_REG	lib/common/reg_defines.h	204;"	d
+DEV_ID_PROJ_NAME_4_REG	lib/common/reg_defines.h	205;"	d
+DEV_ID_PROJ_NAME_5_REG	lib/common/reg_defines.h	206;"	d
+DEV_ID_PROJ_NAME_6_REG	lib/common/reg_defines.h	207;"	d
+DEV_ID_PROJ_NAME_7_REG	lib/common/reg_defines.h	208;"	d
+DEV_ID_PROJ_NAME_8_REG	lib/common/reg_defines.h	209;"	d
+DEV_ID_PROJ_NAME_9_REG	lib/common/reg_defines.h	210;"	d
+DEV_ID_PROJ_NAME_BIT_LEN	lib/common/reg_defines.h	134;"	d
+DEV_ID_PROJ_NAME_BIT_LEN_V1	lib/common/reg_defines.h	172;"	d
+DEV_ID_PROJ_NAME_BYTE_LEN	lib/common/reg_defines.h	131;"	d
+DEV_ID_PROJ_NAME_BYTE_LEN_V1	lib/common/reg_defines.h	169;"	d
+DEV_ID_PROJ_NAME_WORD_LEN	lib/common/reg_defines.h	128;"	d
+DEV_ID_PROJ_NAME_WORD_LEN_V1	lib/common/reg_defines.h	166;"	d
+DEV_ID_VERSION_REG	lib/common/reg_defines.h	183;"	d
+DMA_CTRL_MAC	lib/common/nf2.h	264;"	d
+DMA_CTRL_OWNER	lib/common/nf2.h	265;"	d
+DMA_TX_QUE_0_LAST_1_BYTE_REG	lib/common/reg_defines.h	394;"	d
+DMA_TX_QUE_0_LAST_2_BYTE_REG	lib/common/reg_defines.h	395;"	d
+DMA_TX_QUE_0_LAST_3_BYTE_REG	lib/common/reg_defines.h	396;"	d
+DMA_TX_QUE_0_LAST_4_BYTE_REG	lib/common/reg_defines.h	397;"	d
+DMA_TX_QUE_0_REG	lib/common/reg_defines.h	393;"	d
+DMA_TX_QUE_1_LAST_1_BYTE_REG	lib/common/reg_defines.h	400;"	d
+DMA_TX_QUE_1_LAST_2_BYTE_REG	lib/common/reg_defines.h	401;"	d
+DMA_TX_QUE_1_LAST_3_BYTE_REG	lib/common/reg_defines.h	402;"	d
+DMA_TX_QUE_1_LAST_4_BYTE_REG	lib/common/reg_defines.h	403;"	d
+DMA_TX_QUE_1_REG	lib/common/reg_defines.h	399;"	d
+DMA_TX_QUE_2_LAST_1_BYTE_REG	lib/common/reg_defines.h	406;"	d
+DMA_TX_QUE_2_LAST_2_BYTE_REG	lib/common/reg_defines.h	407;"	d
+DMA_TX_QUE_2_LAST_3_BYTE_REG	lib/common/reg_defines.h	408;"	d
+DMA_TX_QUE_2_LAST_4_BYTE_REG	lib/common/reg_defines.h	409;"	d
+DMA_TX_QUE_2_REG	lib/common/reg_defines.h	405;"	d
+DMA_TX_QUE_3_LAST_1_BYTE_REG	lib/common/reg_defines.h	412;"	d
+DMA_TX_QUE_3_LAST_2_BYTE_REG	lib/common/reg_defines.h	413;"	d
+DMA_TX_QUE_3_LAST_3_BYTE_REG	lib/common/reg_defines.h	414;"	d
+DMA_TX_QUE_3_LAST_4_BYTE_REG	lib/common/reg_defines.h	415;"	d
+DMA_TX_QUE_3_REG	lib/common/reg_defines.h	411;"	d
+DPRINTF	lib/reg_lib/reg_proxy.h	82;"	d
+DPRINTF	lib/reg_lib/reg_proxy.h	94;"	d
+DPRINTFC	lib/reg_lib/reg_proxy.h	85;"	d
+DPRINTFC	lib/reg_lib/reg_proxy.h	95;"	d
+DRAM_BASE_ADDR	lib/common/reg_defines.h	664;"	d
+DRAM_TEST_BAD_RUNS_REG	lib/common/reg_defines.h	578;"	d
+DRAM_TEST_CTRL_REG	lib/common/reg_defines.h	582;"	d
+DRAM_TEST_EN_REG	lib/common/reg_defines.h	581;"	d
+DRAM_TEST_ERR_CNT_REG	lib/common/reg_defines.h	576;"	d
+DRAM_TEST_GOOD_RUNS_REG	lib/common/reg_defines.h	579;"	d
+DRAM_TEST_ITER_NUM_REG	lib/common/reg_defines.h	577;"	d
+DRAM_TEST_LOG_ADDR_REG	lib/common/reg_defines.h	587;"	d
+DRAM_TEST_LOG_EXP_DATA_HI_REG	lib/common/reg_defines.h	588;"	d
+DRAM_TEST_LOG_EXP_DATA_LO_REG	lib/common/reg_defines.h	589;"	d
+DRAM_TEST_LOG_OFFSET	lib/common/reg_defines.h	585;"	d
+DRAM_TEST_LOG_RD_DATA_HI_REG	lib/common/reg_defines.h	590;"	d
+DRAM_TEST_LOG_RD_DATA_LO_REG	lib/common/reg_defines.h	591;"	d
+DRAM_TEST_RAND_SEED_REG	lib/common/reg_defines.h	583;"	d
+DRAM_TEST_STATUS_REG	lib/common/reg_defines.h	580;"	d
+ERR_CNET_ERROR	lib/common/nf2.h	207;"	d
+ERR_CNET_READ_TIMEOUT	lib/common/nf2.h	206;"	d
+ERR_DMA_BUF_OVERFLOW	lib/common/nf2.h	212;"	d
+ERR_DMA_FATAL_ERROR	lib/common/nf2.h	219;"	d
+ERR_DMA_RD_ADDR_ERROR	lib/common/nf2.h	215;"	d
+ERR_DMA_RD_MAC_ERROR	lib/common/nf2.h	217;"	d
+ERR_DMA_RD_SIZE_ERROR	lib/common/nf2.h	213;"	d
+ERR_DMA_RETRY_CNT_EXPIRED	lib/common/nf2.h	211;"	d
+ERR_DMA_SETUP_ERROR	lib/common/nf2.h	221;"	d
+ERR_DMA_TIMEOUT	lib/common/nf2.h	210;"	d
+ERR_DMA_WR_ADDR_ERROR	lib/common/nf2.h	216;"	d
+ERR_DMA_WR_MAC_ERROR	lib/common/nf2.h	218;"	d
+ERR_DMA_WR_SIZE_ERROR	lib/common/nf2.h	214;"	d
+ERR_PROG_BUF_OVERFLOW	lib/common/nf2.h	208;"	d
+ERR_PROG_ERROR	lib/common/nf2.h	209;"	d
+EVT_CAP_DST_MAC_HI_REG	lib/common/reg_defines.h	877;"	d
+EVT_CAP_DST_MAC_LO_REG	lib/common/reg_defines.h	878;"	d
+EVT_CAP_ENABLE_CAPTURE_REG	lib/common/reg_defines.h	875;"	d
+EVT_CAP_ETHERTYPE_REG	lib/common/reg_defines.h	881;"	d
+EVT_CAP_IP_DST_REG	lib/common/reg_defines.h	882;"	d
+EVT_CAP_IP_SRC_REG	lib/common/reg_defines.h	883;"	d
+EVT_CAP_MONITOR_MASK_REG	lib/common/reg_defines.h	888;"	d
+EVT_CAP_NUM_EVTS_DROPPED_REG	lib/common/reg_defines.h	892;"	d
+EVT_CAP_NUM_EVTS_SENT_REG	lib/common/reg_defines.h	891;"	d
+EVT_CAP_NUM_EVT_PKTS_SENT_REG	lib/common/reg_defines.h	890;"	d
+EVT_CAP_OUTPUT_PORTS_REG	lib/common/reg_defines.h	886;"	d
+EVT_CAP_RESET_TIMERS_REG	lib/common/reg_defines.h	887;"	d
+EVT_CAP_SEND_PKT_REG	lib/common/reg_defines.h	876;"	d
+EVT_CAP_SIGNAL_ID_MASK_REG	lib/common/reg_defines.h	893;"	d
+EVT_CAP_SRC_MAC_HI_REG	lib/common/reg_defines.h	879;"	d
+EVT_CAP_SRC_MAC_LO_REG	lib/common/reg_defines.h	880;"	d
+EVT_CAP_TIMER_RESOLUTION_REG	lib/common/reg_defines.h	889;"	d
+EVT_CAP_UDP_DST_PORT_REG	lib/common/reg_defines.h	885;"	d
+EVT_CAP_UDP_SRC_PORT_REG	lib/common/reg_defines.h	884;"	d
 FlowEntry	defination.h	/^}FlowEntry;$/;"	t	typeref:struct:flow_entry_len
-Init	commands.h	/^    int Init(){$/;"	f	struct:Command
-MAX_DEPTH	defination.h	8;"	d
-MAX_LINE_LEN	defination.h	7;"	d
-ModifyCommands	commands.h	/^void ModifyCommands(char * com,int tos){$/;"	f
-OperationName	defination.h	/^const char* OperationName[3] = {"nop","table_add","table_del"};$/;"	v
-ReadCommandFile	commands.h	/^int ReadCommandFile(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
-TABLE_DEPTH	defination.h	6;"	d
-TableAddr	defination.h	/^const uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};$/;"	v
+ID_REVISION	lib/common/nf2.h	192;"	d
+ID_VERSION	lib/common/nf2.h	191;"	d
+INSTALL_PREFIX	lib/reg_lib/Makefile	/^INSTALL_PREFIX ?= \/usr\/local$/;"	m
+INTR_LINK_STATUS_POS	lib/common/nf2.h	469;"	d
+INT_CNET_ERROR	lib/common/nf2.h	235;"	d
+INT_CNET_READ_TIMEOUT	lib/common/nf2.h	236;"	d
+INT_DMA_FATAL_ERROR	lib/common/nf2.h	240;"	d
+INT_DMA_QUEUE_STATUS_CHANGE	lib/common/nf2.h	233;"	d
+INT_DMA_RX_COMPLETE	lib/common/nf2.h	230;"	d
+INT_DMA_SETUP_ERROR	lib/common/nf2.h	239;"	d
+INT_DMA_TRANSFER_ERROR	lib/common/nf2.h	238;"	d
+INT_DMA_TX_COMPLETE	lib/common/nf2.h	231;"	d
+INT_PHY_INTERRUPT	lib/common/nf2.h	232;"	d
+INT_PKT_AVAIL	lib/common/nf2.h	234;"	d
+INT_PROG_ERROR	lib/common/nf2.h	237;"	d
+INT_UNKNOWN	lib/common/nf2.h	242;"	d
+IN_ARB_LAST_PKT_CTRL_0_REG	lib/common/reg_defines.h	669;"	d
+IN_ARB_LAST_PKT_CTRL_1_REG	lib/common/reg_defines.h	672;"	d
+IN_ARB_LAST_PKT_WORD_0_HI_REG	lib/common/reg_defines.h	668;"	d
+IN_ARB_LAST_PKT_WORD_0_LO_REG	lib/common/reg_defines.h	667;"	d
+IN_ARB_LAST_PKT_WORD_1_HI_REG	lib/common/reg_defines.h	671;"	d
+IN_ARB_LAST_PKT_WORD_1_LO_REG	lib/common/reg_defines.h	670;"	d
+IN_ARB_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	666;"	d
+IN_ARB_STATE_REG	lib/common/reg_defines.h	673;"	d
+Init	commands.c	/^void Init(Command *entry,FlowEntry TableInfor[5]){$/;"	f
+InitTcamFlowEntry	tcam_flow_entry.c	/^int InitTcamFlowEntry(uint32_t ph_addr){$/;"	f
+LDFLAGS	lib/reg_lib/Makefile	/^LDFLAGS = -lnf2regs$/;"	m
+MAC_DISABLE_RX_BIT_NUM	lib/common/reg_defines.h	98;"	d
+MAC_DISABLE_TX_BIT_NUM	lib/common/reg_defines.h	97;"	d
+MAC_DIS_CRC_CHECK	lib/common/reg_defines.h	101;"	d
+MAC_DIS_CRC_GEN	lib/common/reg_defines.h	102;"	d
+MAC_DIS_JUMBO_RX_BIT_NUM	lib/common/reg_defines.h	100;"	d
+MAC_DIS_JUMBO_TX_BIT_NUM	lib/common/reg_defines.h	99;"	d
+MAC_GRP_0_CONTROL_REG	lib/common/reg_defines.h	251;"	d
+MAC_GRP_1_CONTROL_REG	lib/common/reg_defines.h	265;"	d
+MAC_GRP_2_CONTROL_REG	lib/common/reg_defines.h	279;"	d
+MAC_GRP_3_CONTROL_REG	lib/common/reg_defines.h	293;"	d
+MAX_DEPTH	defination.h	10;"	d
+MAX_DEV_LEN	lib/common/nf2util_proxy_common.c	45;"	d	file:
+MAX_IFACE	lib/common/nf2.h	45;"	d
+MAX_IPADDR_LEN	lib/common/nf2util.h	42;"	d
+MAX_LINE_LEN	defination.h	9;"	d
+MAX_STR_LEN	lib/common/nf2util_proxy_common.c	44;"	d	file:
+MAX_VER_LEN	lib/common/nf2util_proxy_common.c	46;"	d	file:
+MD5_LEN	lib/common/nf2util_proxy_common.c	43;"	d	file:
+MDIO_0_AUTONEGOTIATION_ADVERT_REG	lib/common/reg_defines.h	421;"	d
+MDIO_0_AUTONEG_EXPANSION_REG	lib/common/reg_defines.h	423;"	d
+MDIO_0_AUTONEG_LINK_PARTNER_BASE_PAGE_ABILITY_REG	lib/common/reg_defines.h	422;"	d
+MDIO_0_AUTONEG_LINK_PARTNER_RCVD_NEXT_PAGE_REG	lib/common/reg_defines.h	425;"	d
+MDIO_0_AUTONEG_NEXT_PAGE_TX_REG	lib/common/reg_defines.h	424;"	d
+MDIO_0_AUX_STATUS	lib/common/nf2.h	459;"	d
+MDIO_0_BASE	lib/common/nf2.h	456;"	d
+MDIO_0_CONTROL_REG	lib/common/reg_defines.h	417;"	d
+MDIO_0_EXTENDED_STATUS_REG	lib/common/reg_defines.h	432;"	d
+MDIO_0_INTERRUPT_MASK_REG	lib/common/reg_defines.h	433;"	d
+MDIO_0_INTR_MASK	lib/common/nf2.h	461;"	d
+MDIO_0_INTR_STATUS	lib/common/nf2.h	460;"	d
+MDIO_0_MASTER_SLAVE_CTRL_REG	lib/common/reg_defines.h	426;"	d
+MDIO_0_MASTER_SLAVE_STATUS_REG	lib/common/reg_defines.h	427;"	d
+MDIO_0_MMD_ACCESS_CTRL_REG	lib/common/reg_defines.h	430;"	d
+MDIO_0_MMD_ACCESS_STATUS_REG	lib/common/reg_defines.h	431;"	d
+MDIO_0_PHY_ID_0_REG	lib/common/reg_defines.h	419;"	d
+MDIO_0_PHY_ID_1_REG	lib/common/reg_defines.h	420;"	d
+MDIO_0_PHY_ID_HI_REG	lib/common/nf2.h	458;"	d
+MDIO_0_PHY_ID_LO_REG	lib/common/nf2.h	457;"	d
+MDIO_0_PSE_CTRL_REG	lib/common/reg_defines.h	428;"	d
+MDIO_0_PSE_STATUS_REG	lib/common/reg_defines.h	429;"	d
+MDIO_0_STATUS_REG	lib/common/reg_defines.h	418;"	d
+MDIO_1_AUTONEGOTIATION_ADVERT_REG	lib/common/reg_defines.h	439;"	d
+MDIO_1_AUTONEG_EXPANSION_REG	lib/common/reg_defines.h	441;"	d
+MDIO_1_AUTONEG_LINK_PARTNER_BASE_PAGE_ABILITY_REG	lib/common/reg_defines.h	440;"	d
+MDIO_1_AUTONEG_LINK_PARTNER_RCVD_NEXT_PAGE_REG	lib/common/reg_defines.h	443;"	d
+MDIO_1_AUTONEG_NEXT_PAGE_TX_REG	lib/common/reg_defines.h	442;"	d
+MDIO_1_CONTROL_REG	lib/common/reg_defines.h	435;"	d
+MDIO_1_EXTENDED_STATUS_REG	lib/common/reg_defines.h	450;"	d
+MDIO_1_INTERRUPT_MASK_REG	lib/common/reg_defines.h	451;"	d
+MDIO_1_MASTER_SLAVE_CTRL_REG	lib/common/reg_defines.h	444;"	d
+MDIO_1_MASTER_SLAVE_STATUS_REG	lib/common/reg_defines.h	445;"	d
+MDIO_1_MMD_ACCESS_CTRL_REG	lib/common/reg_defines.h	448;"	d
+MDIO_1_MMD_ACCESS_STATUS_REG	lib/common/reg_defines.h	449;"	d
+MDIO_1_PHY_ID_0_REG	lib/common/reg_defines.h	437;"	d
+MDIO_1_PHY_ID_1_REG	lib/common/reg_defines.h	438;"	d
+MDIO_1_PSE_CTRL_REG	lib/common/reg_defines.h	446;"	d
+MDIO_1_PSE_STATUS_REG	lib/common/reg_defines.h	447;"	d
+MDIO_1_STATUS_REG	lib/common/reg_defines.h	436;"	d
+MDIO_2_AUTONEGOTIATION_ADVERT_REG	lib/common/reg_defines.h	457;"	d
+MDIO_2_AUTONEG_EXPANSION_REG	lib/common/reg_defines.h	459;"	d
+MDIO_2_AUTONEG_LINK_PARTNER_BASE_PAGE_ABILITY_REG	lib/common/reg_defines.h	458;"	d
+MDIO_2_AUTONEG_LINK_PARTNER_RCVD_NEXT_PAGE_REG	lib/common/reg_defines.h	461;"	d
+MDIO_2_AUTONEG_NEXT_PAGE_TX_REG	lib/common/reg_defines.h	460;"	d
+MDIO_2_CONTROL_REG	lib/common/reg_defines.h	453;"	d
+MDIO_2_EXTENDED_STATUS_REG	lib/common/reg_defines.h	468;"	d
+MDIO_2_INTERRUPT_MASK_REG	lib/common/reg_defines.h	469;"	d
+MDIO_2_MASTER_SLAVE_CTRL_REG	lib/common/reg_defines.h	462;"	d
+MDIO_2_MASTER_SLAVE_STATUS_REG	lib/common/reg_defines.h	463;"	d
+MDIO_2_MMD_ACCESS_CTRL_REG	lib/common/reg_defines.h	466;"	d
+MDIO_2_MMD_ACCESS_STATUS_REG	lib/common/reg_defines.h	467;"	d
+MDIO_2_PHY_ID_0_REG	lib/common/reg_defines.h	455;"	d
+MDIO_2_PHY_ID_1_REG	lib/common/reg_defines.h	456;"	d
+MDIO_2_PSE_CTRL_REG	lib/common/reg_defines.h	464;"	d
+MDIO_2_PSE_STATUS_REG	lib/common/reg_defines.h	465;"	d
+MDIO_2_STATUS_REG	lib/common/reg_defines.h	454;"	d
+MDIO_3_AUTONEGOTIATION_ADVERT_REG	lib/common/reg_defines.h	475;"	d
+MDIO_3_AUTONEG_EXPANSION_REG	lib/common/reg_defines.h	477;"	d
+MDIO_3_AUTONEG_LINK_PARTNER_BASE_PAGE_ABILITY_REG	lib/common/reg_defines.h	476;"	d
+MDIO_3_AUTONEG_LINK_PARTNER_RCVD_NEXT_PAGE_REG	lib/common/reg_defines.h	479;"	d
+MDIO_3_AUTONEG_NEXT_PAGE_TX_REG	lib/common/reg_defines.h	478;"	d
+MDIO_3_CONTROL_REG	lib/common/reg_defines.h	471;"	d
+MDIO_3_EXTENDED_STATUS_REG	lib/common/reg_defines.h	486;"	d
+MDIO_3_INTERRUPT_MASK_REG	lib/common/reg_defines.h	487;"	d
+MDIO_3_MASTER_SLAVE_CTRL_REG	lib/common/reg_defines.h	480;"	d
+MDIO_3_MASTER_SLAVE_STATUS_REG	lib/common/reg_defines.h	481;"	d
+MDIO_3_MMD_ACCESS_CTRL_REG	lib/common/reg_defines.h	484;"	d
+MDIO_3_MMD_ACCESS_STATUS_REG	lib/common/reg_defines.h	485;"	d
+MDIO_3_PHY_ID_0_REG	lib/common/reg_defines.h	473;"	d
+MDIO_3_PHY_ID_1_REG	lib/common/reg_defines.h	474;"	d
+MDIO_3_PSE_CTRL_REG	lib/common/reg_defines.h	482;"	d
+MDIO_3_PSE_STATUS_REG	lib/common/reg_defines.h	483;"	d
+MDIO_3_STATUS_REG	lib/common/reg_defines.h	472;"	d
+ModifyCommands	commands.c	/^void ModifyCommands(char * com,int tos){$/;"	f
+NF2C	lib/reg_lib/reg_proxy_server.h	46;"	d
+NF2_DEVICE_ID	lib/common/nf2.h	111;"	d
+NF2_DEVICE_STR	lib/common/nf2.h	113;"	d
+NF2_DEV_NAME	lib/common/nf2.h	38;"	d
+NF2_GET_BOARD_ID	lib/common/nf2.h	342;"	d
+NF2_GET_CNET_DEVICE_ID	lib/common/nf2.h	392;"	d
+NF2_GET_CNET_ENABLE_DEBUG_TRISTATE	lib/common/nf2.h	403;"	d
+NF2_GET_CNET_ENABLE_INGRESS_ARBITER	lib/common/nf2.h	405;"	d
+NF2_GET_CNET_ENABLE_RX_DMA	lib/common/nf2.h	407;"	d
+NF2_GET_CNET_ENABLE_RX_FIFO	lib/common/nf2.h	401;"	d
+NF2_GET_CNET_ENABLE_TX_MAC	lib/common/nf2.h	402;"	d
+NF2_GET_CNET_ERROR	lib/common/nf2.h	351;"	d
+NF2_GET_CNET_ERROR_TX_OVERRUN_MAC	lib/common/nf2.h	398;"	d
+NF2_GET_CNET_ERROR_TX_UNDERRUN_MAC	lib/common/nf2.h	396;"	d
+NF2_GET_CNET_MAC_CFG_FULL_DUPLEX	lib/common/nf2.h	422;"	d
+NF2_GET_CNET_MAC_CFG_JUMBO_ENABLE	lib/common/nf2.h	428;"	d
+NF2_GET_CNET_MAC_CFG_RX_WANT_FCS	lib/common/nf2.h	426;"	d
+NF2_GET_CNET_MAC_CFG_SPEED	lib/common/nf2.h	430;"	d
+NF2_GET_CNET_MAC_CFG_TX_FCS_SUPPLIED	lib/common/nf2.h	424;"	d
+NF2_GET_CNET_MF_STATUS_RX_FIFO_EMPTY	lib/common/nf2.h	409;"	d
+NF2_GET_CNET_MF_STATUS_RX_NUM_PKTS	lib/common/nf2.h	413;"	d
+NF2_GET_CNET_MF_STATUS_RX_PKT_AVAIL	lib/common/nf2.h	411;"	d
+NF2_GET_CNET_MF_STATUS_TX_FIFO_FULL	lib/common/nf2.h	415;"	d
+NF2_GET_CNET_MF_STATUS_TX_FIFO_NO_MAX_PKT	lib/common/nf2.h	417;"	d
+NF2_GET_CNET_MF_STATUS_TX_NUM_PKTS	lib/common/nf2.h	419;"	d
+NF2_GET_CNET_READ_TIMEOUT	lib/common/nf2.h	350;"	d
+NF2_GET_CNET_RESET	lib/common/nf2.h	345;"	d
+NF2_GET_CNET_RESET_MAC	lib/common/nf2.h	394;"	d
+NF2_GET_CNET_RXQ_RD_PTR	lib/common/nf2.h	434;"	d
+NF2_GET_CNET_RXQ_WR_PTR	lib/common/nf2.h	433;"	d
+NF2_GET_CNET_VERSION	lib/common/nf2.h	391;"	d
+NF2_GET_CONTROL	lib/common/nf2.h	343;"	d
+NF2_GET_DMA_BUF_OVERFLOW	lib/common/nf2.h	357;"	d
+NF2_GET_DMA_CTRL_MAC	lib/common/nf2.h	384;"	d
+NF2_GET_DMA_CTRL_OWNER	lib/common/nf2.h	385;"	d
+NF2_GET_DMA_FATAL_ERROR	lib/common/nf2.h	364;"	d
+NF2_GET_DMA_RD_ADDR_ERROR	lib/common/nf2.h	360;"	d
+NF2_GET_DMA_RD_MAC_ERROR	lib/common/nf2.h	362;"	d
+NF2_GET_DMA_RD_SIZE_ERROR	lib/common/nf2.h	358;"	d
+NF2_GET_DMA_RETRY_CNT_EXPIRED	lib/common/nf2.h	355;"	d
+NF2_GET_DMA_TIMEOUT	lib/common/nf2.h	354;"	d
+NF2_GET_DMA_WR_ADDR_ERROR	lib/common/nf2.h	361;"	d
+NF2_GET_DMA_WR_MAC_ERROR	lib/common/nf2.h	363;"	d
+NF2_GET_DMA_WR_SIZE_ERROR	lib/common/nf2.h	359;"	d
+NF2_GET_INT_CNET_ERROR	lib/common/nf2.h	370;"	d
+NF2_GET_INT_CNET_READ_TIMEOUT	lib/common/nf2.h	371;"	d
+NF2_GET_INT_DMA_FATAL_ERROR	lib/common/nf2.h	377;"	d
+NF2_GET_INT_DMA_RX_COMPLETE	lib/common/nf2.h	367;"	d
+NF2_GET_INT_DMA_SETUP_ERROR	lib/common/nf2.h	376;"	d
+NF2_GET_INT_DMA_TRANSFER_ERROR	lib/common/nf2.h	374;"	d
+NF2_GET_INT_DMA_TX_COMPLETE	lib/common/nf2.h	366;"	d
+NF2_GET_INT_PHY_INTERRUPT	lib/common/nf2.h	368;"	d
+NF2_GET_INT_PKT_AVAIL	lib/common/nf2.h	369;"	d
+NF2_GET_INT_PROG_ERROR	lib/common/nf2.h	373;"	d
+NF2_GET_LED	lib/common/nf2.h	346;"	d
+NF2_GET_PHY_DATA	lib/common/nf2.h	443;"	d
+NF2_GET_PHY_DONE	lib/common/nf2.h	444;"	d
+NF2_GET_PHY_DONE_CNT	lib/common/nf2.h	445;"	d
+NF2_GET_PROG_BUF_OVERFLOW	lib/common/nf2.h	352;"	d
+NF2_GET_PROG_DONE	lib/common/nf2.h	380;"	d
+NF2_GET_PROG_ERROR	lib/common/nf2.h	353;"	d
+NF2_GET_PROG_FIFO_EMPTY	lib/common/nf2.h	381;"	d
+NF2_GET_PROG_INIT	lib/common/nf2.h	379;"	d
+NF2_GET_PROG_IN_PROGRESS	lib/common/nf2.h	382;"	d
+NF2_GET_RESET	lib/common/nf2.h	348;"	d
+NF2_GET_REVISION	lib/common/nf2.h	340;"	d
+NF2_GET_VERSION	lib/common/nf2.h	339;"	d
+NF2_REVISION	lib/common/nf2.h	112;"	d
+NF2_SET_DMA_CTRL_MAC	lib/common/nf2.h	387;"	d
+NF2_SET_PHY_ADDR	lib/common/nf2.h	440;"	d
+NF2_SET_PHY_DATA	lib/common/nf2.h	441;"	d
+NF2_SET_PHY_IS_READ	lib/common/nf2.h	438;"	d
+NF2_SET_PHY_SELECT	lib/common/nf2.h	439;"	d
+OPEN_REQ	lib/reg_lib/reg_proxy.h	66;"	d
+OQ_ADDRESS_HI_REG_0	lib/common/reg_defines.h	731;"	d
+OQ_ADDRESS_HI_REG_1	lib/common/reg_defines.h	749;"	d
+OQ_ADDRESS_HI_REG_2	lib/common/reg_defines.h	767;"	d
+OQ_ADDRESS_HI_REG_3	lib/common/reg_defines.h	785;"	d
+OQ_ADDRESS_HI_REG_4	lib/common/reg_defines.h	803;"	d
+OQ_ADDRESS_HI_REG_5	lib/common/reg_defines.h	821;"	d
+OQ_ADDRESS_HI_REG_6	lib/common/reg_defines.h	839;"	d
+OQ_ADDRESS_HI_REG_7	lib/common/reg_defines.h	857;"	d
+OQ_ADDRESS_LO_REG_0	lib/common/reg_defines.h	732;"	d
+OQ_ADDRESS_LO_REG_1	lib/common/reg_defines.h	750;"	d
+OQ_ADDRESS_LO_REG_2	lib/common/reg_defines.h	768;"	d
+OQ_ADDRESS_LO_REG_3	lib/common/reg_defines.h	786;"	d
+OQ_ADDRESS_LO_REG_4	lib/common/reg_defines.h	804;"	d
+OQ_ADDRESS_LO_REG_5	lib/common/reg_defines.h	822;"	d
+OQ_ADDRESS_LO_REG_6	lib/common/reg_defines.h	840;"	d
+OQ_ADDRESS_LO_REG_7	lib/common/reg_defines.h	858;"	d
+OQ_CONTROL_REG_0	lib/common/reg_defines.h	739;"	d
+OQ_CONTROL_REG_1	lib/common/reg_defines.h	757;"	d
+OQ_CONTROL_REG_2	lib/common/reg_defines.h	775;"	d
+OQ_CONTROL_REG_3	lib/common/reg_defines.h	793;"	d
+OQ_CONTROL_REG_4	lib/common/reg_defines.h	811;"	d
+OQ_CONTROL_REG_5	lib/common/reg_defines.h	829;"	d
+OQ_CONTROL_REG_6	lib/common/reg_defines.h	847;"	d
+OQ_CONTROL_REG_7	lib/common/reg_defines.h	865;"	d
+OQ_ENABLE_SEND_BIT_NUM	lib/common/reg_defines.h	720;"	d
+OQ_FULL_THRESH_REG_0	lib/common/reg_defines.h	737;"	d
+OQ_FULL_THRESH_REG_1	lib/common/reg_defines.h	755;"	d
+OQ_FULL_THRESH_REG_2	lib/common/reg_defines.h	773;"	d
+OQ_FULL_THRESH_REG_3	lib/common/reg_defines.h	791;"	d
+OQ_FULL_THRESH_REG_4	lib/common/reg_defines.h	809;"	d
+OQ_FULL_THRESH_REG_5	lib/common/reg_defines.h	827;"	d
+OQ_FULL_THRESH_REG_6	lib/common/reg_defines.h	845;"	d
+OQ_FULL_THRESH_REG_7	lib/common/reg_defines.h	863;"	d
+OQ_INITIALIZE_OQ_BIT_NUM	lib/common/reg_defines.h	721;"	d
+OQ_MAX_PKTS_IN_Q_REG_0	lib/common/reg_defines.h	736;"	d
+OQ_MAX_PKTS_IN_Q_REG_1	lib/common/reg_defines.h	754;"	d
+OQ_MAX_PKTS_IN_Q_REG_2	lib/common/reg_defines.h	772;"	d
+OQ_MAX_PKTS_IN_Q_REG_3	lib/common/reg_defines.h	790;"	d
+OQ_MAX_PKTS_IN_Q_REG_4	lib/common/reg_defines.h	808;"	d
+OQ_MAX_PKTS_IN_Q_REG_5	lib/common/reg_defines.h	826;"	d
+OQ_MAX_PKTS_IN_Q_REG_6	lib/common/reg_defines.h	844;"	d
+OQ_MAX_PKTS_IN_Q_REG_7	lib/common/reg_defines.h	862;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_0	lib/common/reg_defines.h	729;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_1	lib/common/reg_defines.h	747;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_2	lib/common/reg_defines.h	765;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_3	lib/common/reg_defines.h	783;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_4	lib/common/reg_defines.h	801;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_5	lib/common/reg_defines.h	819;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_6	lib/common/reg_defines.h	837;"	d
+OQ_NUM_OVERHEAD_BYTES_REMOVED_REG_7	lib/common/reg_defines.h	855;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_0	lib/common/reg_defines.h	725;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_1	lib/common/reg_defines.h	743;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_2	lib/common/reg_defines.h	761;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_3	lib/common/reg_defines.h	779;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_4	lib/common/reg_defines.h	797;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_5	lib/common/reg_defines.h	815;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_6	lib/common/reg_defines.h	833;"	d
+OQ_NUM_OVERHEAD_BYTES_STORED_REG_7	lib/common/reg_defines.h	851;"	d
+OQ_NUM_PKTS_DROPPED_REG_0	lib/common/reg_defines.h	727;"	d
+OQ_NUM_PKTS_DROPPED_REG_1	lib/common/reg_defines.h	745;"	d
+OQ_NUM_PKTS_DROPPED_REG_2	lib/common/reg_defines.h	763;"	d
+OQ_NUM_PKTS_DROPPED_REG_3	lib/common/reg_defines.h	781;"	d
+OQ_NUM_PKTS_DROPPED_REG_4	lib/common/reg_defines.h	799;"	d
+OQ_NUM_PKTS_DROPPED_REG_5	lib/common/reg_defines.h	817;"	d
+OQ_NUM_PKTS_DROPPED_REG_6	lib/common/reg_defines.h	835;"	d
+OQ_NUM_PKTS_DROPPED_REG_7	lib/common/reg_defines.h	853;"	d
+OQ_NUM_PKTS_IN_Q_REG_0	lib/common/reg_defines.h	735;"	d
+OQ_NUM_PKTS_IN_Q_REG_1	lib/common/reg_defines.h	753;"	d
+OQ_NUM_PKTS_IN_Q_REG_2	lib/common/reg_defines.h	771;"	d
+OQ_NUM_PKTS_IN_Q_REG_3	lib/common/reg_defines.h	789;"	d
+OQ_NUM_PKTS_IN_Q_REG_4	lib/common/reg_defines.h	807;"	d
+OQ_NUM_PKTS_IN_Q_REG_5	lib/common/reg_defines.h	825;"	d
+OQ_NUM_PKTS_IN_Q_REG_6	lib/common/reg_defines.h	843;"	d
+OQ_NUM_PKTS_IN_Q_REG_7	lib/common/reg_defines.h	861;"	d
+OQ_NUM_PKTS_REMOVED_REG_0	lib/common/reg_defines.h	730;"	d
+OQ_NUM_PKTS_REMOVED_REG_1	lib/common/reg_defines.h	748;"	d
+OQ_NUM_PKTS_REMOVED_REG_2	lib/common/reg_defines.h	766;"	d
+OQ_NUM_PKTS_REMOVED_REG_3	lib/common/reg_defines.h	784;"	d
+OQ_NUM_PKTS_REMOVED_REG_4	lib/common/reg_defines.h	802;"	d
+OQ_NUM_PKTS_REMOVED_REG_5	lib/common/reg_defines.h	820;"	d
+OQ_NUM_PKTS_REMOVED_REG_6	lib/common/reg_defines.h	838;"	d
+OQ_NUM_PKTS_REMOVED_REG_7	lib/common/reg_defines.h	856;"	d
+OQ_NUM_PKTS_STORED_REG_0	lib/common/reg_defines.h	726;"	d
+OQ_NUM_PKTS_STORED_REG_1	lib/common/reg_defines.h	744;"	d
+OQ_NUM_PKTS_STORED_REG_2	lib/common/reg_defines.h	762;"	d
+OQ_NUM_PKTS_STORED_REG_3	lib/common/reg_defines.h	780;"	d
+OQ_NUM_PKTS_STORED_REG_4	lib/common/reg_defines.h	798;"	d
+OQ_NUM_PKTS_STORED_REG_5	lib/common/reg_defines.h	816;"	d
+OQ_NUM_PKTS_STORED_REG_6	lib/common/reg_defines.h	834;"	d
+OQ_NUM_PKTS_STORED_REG_7	lib/common/reg_defines.h	852;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_0	lib/common/reg_defines.h	728;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_1	lib/common/reg_defines.h	746;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_2	lib/common/reg_defines.h	764;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_3	lib/common/reg_defines.h	782;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_4	lib/common/reg_defines.h	800;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_5	lib/common/reg_defines.h	818;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_6	lib/common/reg_defines.h	836;"	d
+OQ_NUM_PKT_BYTES_REMOVED_REG_7	lib/common/reg_defines.h	854;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_0	lib/common/reg_defines.h	724;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_1	lib/common/reg_defines.h	742;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_2	lib/common/reg_defines.h	760;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_3	lib/common/reg_defines.h	778;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_4	lib/common/reg_defines.h	796;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_5	lib/common/reg_defines.h	814;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_6	lib/common/reg_defines.h	832;"	d
+OQ_NUM_PKT_BYTES_STORED_REG_7	lib/common/reg_defines.h	850;"	d
+OQ_NUM_WORDS_IN_Q_REG_0	lib/common/reg_defines.h	738;"	d
+OQ_NUM_WORDS_IN_Q_REG_1	lib/common/reg_defines.h	756;"	d
+OQ_NUM_WORDS_IN_Q_REG_2	lib/common/reg_defines.h	774;"	d
+OQ_NUM_WORDS_IN_Q_REG_3	lib/common/reg_defines.h	792;"	d
+OQ_NUM_WORDS_IN_Q_REG_4	lib/common/reg_defines.h	810;"	d
+OQ_NUM_WORDS_IN_Q_REG_5	lib/common/reg_defines.h	828;"	d
+OQ_NUM_WORDS_IN_Q_REG_6	lib/common/reg_defines.h	846;"	d
+OQ_NUM_WORDS_IN_Q_REG_7	lib/common/reg_defines.h	864;"	d
+OQ_NUM_WORDS_LEFT_REG_0	lib/common/reg_defines.h	723;"	d
+OQ_NUM_WORDS_LEFT_REG_1	lib/common/reg_defines.h	741;"	d
+OQ_NUM_WORDS_LEFT_REG_2	lib/common/reg_defines.h	759;"	d
+OQ_NUM_WORDS_LEFT_REG_3	lib/common/reg_defines.h	777;"	d
+OQ_NUM_WORDS_LEFT_REG_4	lib/common/reg_defines.h	795;"	d
+OQ_NUM_WORDS_LEFT_REG_5	lib/common/reg_defines.h	813;"	d
+OQ_NUM_WORDS_LEFT_REG_6	lib/common/reg_defines.h	831;"	d
+OQ_NUM_WORDS_LEFT_REG_7	lib/common/reg_defines.h	849;"	d
+OQ_RD_ADDRESS_REG_0	lib/common/reg_defines.h	734;"	d
+OQ_RD_ADDRESS_REG_1	lib/common/reg_defines.h	752;"	d
+OQ_RD_ADDRESS_REG_2	lib/common/reg_defines.h	770;"	d
+OQ_RD_ADDRESS_REG_3	lib/common/reg_defines.h	788;"	d
+OQ_RD_ADDRESS_REG_4	lib/common/reg_defines.h	806;"	d
+OQ_RD_ADDRESS_REG_5	lib/common/reg_defines.h	824;"	d
+OQ_RD_ADDRESS_REG_6	lib/common/reg_defines.h	842;"	d
+OQ_RD_ADDRESS_REG_7	lib/common/reg_defines.h	860;"	d
+OQ_WR_ADDRESS_REG_0	lib/common/reg_defines.h	733;"	d
+OQ_WR_ADDRESS_REG_1	lib/common/reg_defines.h	751;"	d
+OQ_WR_ADDRESS_REG_2	lib/common/reg_defines.h	769;"	d
+OQ_WR_ADDRESS_REG_3	lib/common/reg_defines.h	787;"	d
+OQ_WR_ADDRESS_REG_4	lib/common/reg_defines.h	805;"	d
+OQ_WR_ADDRESS_REG_5	lib/common/reg_defines.h	823;"	d
+OQ_WR_ADDRESS_REG_6	lib/common/reg_defines.h	841;"	d
+OQ_WR_ADDRESS_REG_7	lib/common/reg_defines.h	859;"	d
+OperationName	defination.h	/^static char* OperationName[3] = {"nop","table_add","table_del"};$/;"	v
+PATHLEN	lib/common/nf2util.h	38;"	d
+PATHLEN	lib/common/util.h	38;"	d
+PATHLEN	lib/reg_lib/client_test.c	58;"	d	file:
+PHY_100BASE_T2_FULL_DPLX_BIT_POS	lib/common/reg_defines.h	521;"	d
+PHY_100BASE_T2_HALF_DPLX_BIT_POS	lib/common/reg_defines.h	522;"	d
+PHY_100BASE_T4_BIT_POS	lib/common/reg_defines.h	516;"	d
+PHY_100BASE_X_FULL_DPLX_BIT_POS	lib/common/reg_defines.h	517;"	d
+PHY_100BASE_X_HALF_DPLX_BIT_POS	lib/common/reg_defines.h	518;"	d
+PHY_10MBPS_FULL_DPLX_BIT_POS	lib/common/reg_defines.h	519;"	d
+PHY_10MBPS_HALF_DPLX_BIT_POS	lib/common/reg_defines.h	520;"	d
+PHY_ADDR	lib/common/nf2.h	331;"	d
+PHY_AUTONEG_ABILITY_BIT_POS	lib/common/reg_defines.h	528;"	d
+PHY_AUTONEG_COMPLETE_BIT_POS	lib/common/reg_defines.h	526;"	d
+PHY_AUTONEG_ENABLE_BIT_POS	lib/common/reg_defines.h	507;"	d
+PHY_COLLISION_TEST_BIT_POS	lib/common/reg_defines.h	512;"	d
+PHY_DATA	lib/common/nf2.h	332;"	d
+PHY_DONE	lib/common/nf2.h	334;"	d
+PHY_DONE_CNT	lib/common/nf2.h	335;"	d
+PHY_DUPLEX_MODE_BIT_POS	lib/common/reg_defines.h	511;"	d
+PHY_EXTENDED_CAPABILITY_BIT_POS	lib/common/reg_defines.h	531;"	d
+PHY_EXTENDED_STATUS_BIT_POS	lib/common/reg_defines.h	523;"	d
+PHY_ISOLATE_BIT_POS	lib/common/reg_defines.h	509;"	d
+PHY_JABBER_DETECT_BIT_POS	lib/common/reg_defines.h	530;"	d
+PHY_LINK_STATUS_BIT_POS	lib/common/reg_defines.h	529;"	d
+PHY_LOOPBACK_BIT_POS	lib/common/reg_defines.h	505;"	d
+PHY_MF_PREAMBLE_SPRSN_BIT_POS	lib/common/reg_defines.h	525;"	d
+PHY_PHY	lib/common/nf2.h	330;"	d
+PHY_PWR_DOWN_BIT_POS	lib/common/reg_defines.h	508;"	d
+PHY_RD_WR	lib/common/nf2.h	329;"	d
+PHY_REG_BASE	lib/common/nf2.h	181;"	d
+PHY_REG_CMD	lib/common/nf2.h	183;"	d
+PHY_REG_STATUS	lib/common/nf2.h	184;"	d
+PHY_REMOTE_FAULT_BIT_POS	lib/common/reg_defines.h	527;"	d
+PHY_RESTART_AUTONEG_BIT_POS	lib/common/reg_defines.h	510;"	d
+PHY_RST_BIT_POS	lib/common/reg_defines.h	504;"	d
+PHY_SPEED_SEL_HI_BIT_POS	lib/common/reg_defines.h	513;"	d
+PHY_SPEED_SEL_LO_BIT_POS	lib/common/reg_defines.h	506;"	d
+PHY_TEST_CTRL_REG	lib/common/reg_defines.h	596;"	d
+PHY_TEST_INIT_SEQ_NO_REG	lib/common/reg_defines.h	599;"	d
+PHY_TEST_PATTERN_REG	lib/common/reg_defines.h	598;"	d
+PHY_TEST_PHY_0_RX_CTRL_REG	lib/common/reg_defines.h	610;"	d
+PHY_TEST_PHY_0_RX_ERR_PKT_CNT_REG	lib/common/reg_defines.h	608;"	d
+PHY_TEST_PHY_0_RX_GOOD_PKT_CNT_REG	lib/common/reg_defines.h	607;"	d
+PHY_TEST_PHY_0_RX_LOG_CTRL_REG	lib/common/reg_defines.h	614;"	d
+PHY_TEST_PHY_0_RX_LOG_EXP_DATA_REG	lib/common/reg_defines.h	612;"	d
+PHY_TEST_PHY_0_RX_LOG_RX_DATA_REG	lib/common/reg_defines.h	613;"	d
+PHY_TEST_PHY_0_RX_LOG_STATUS_REG	lib/common/reg_defines.h	611;"	d
+PHY_TEST_PHY_0_RX_SEQ_NO_REG	lib/common/reg_defines.h	609;"	d
+PHY_TEST_PHY_0_RX_STATUS_REG	lib/common/reg_defines.h	606;"	d
+PHY_TEST_PHY_0_TX_ITER_CNT_REG	lib/common/reg_defines.h	602;"	d
+PHY_TEST_PHY_0_TX_PKT_CNT_REG	lib/common/reg_defines.h	603;"	d
+PHY_TEST_PHY_0_TX_RAND_SEED_REG	lib/common/reg_defines.h	605;"	d
+PHY_TEST_PHY_0_TX_SEQ_NO_REG	lib/common/reg_defines.h	604;"	d
+PHY_TEST_PHY_0_TX_STATUS_REG	lib/common/reg_defines.h	601;"	d
+PHY_TEST_PHY_1_RX_CTRL_REG	lib/common/reg_defines.h	625;"	d
+PHY_TEST_PHY_1_RX_ERR_PKT_CNT_REG	lib/common/reg_defines.h	623;"	d
+PHY_TEST_PHY_1_RX_GOOD_PKT_CNT_REG	lib/common/reg_defines.h	622;"	d
+PHY_TEST_PHY_1_RX_LOG_CTRL_REG	lib/common/reg_defines.h	629;"	d
+PHY_TEST_PHY_1_RX_LOG_EXP_DATA_REG	lib/common/reg_defines.h	627;"	d
+PHY_TEST_PHY_1_RX_LOG_RX_DATA_REG	lib/common/reg_defines.h	628;"	d
+PHY_TEST_PHY_1_RX_LOG_STATUS_REG	lib/common/reg_defines.h	626;"	d
+PHY_TEST_PHY_1_RX_SEQ_NO_REG	lib/common/reg_defines.h	624;"	d
+PHY_TEST_PHY_1_RX_STATUS_REG	lib/common/reg_defines.h	621;"	d
+PHY_TEST_PHY_1_TX_ITER_CNT_REG	lib/common/reg_defines.h	617;"	d
+PHY_TEST_PHY_1_TX_PKT_CNT_REG	lib/common/reg_defines.h	618;"	d
+PHY_TEST_PHY_1_TX_RAND_SEED_REG	lib/common/reg_defines.h	620;"	d
+PHY_TEST_PHY_1_TX_SEQ_NO_REG	lib/common/reg_defines.h	619;"	d
+PHY_TEST_PHY_1_TX_STATUS_REG	lib/common/reg_defines.h	616;"	d
+PHY_TEST_PHY_2_RX_CTRL_REG	lib/common/reg_defines.h	640;"	d
+PHY_TEST_PHY_2_RX_ERR_PKT_CNT_REG	lib/common/reg_defines.h	638;"	d
+PHY_TEST_PHY_2_RX_GOOD_PKT_CNT_REG	lib/common/reg_defines.h	637;"	d
+PHY_TEST_PHY_2_RX_LOG_CTRL_REG	lib/common/reg_defines.h	644;"	d
+PHY_TEST_PHY_2_RX_LOG_EXP_DATA_REG	lib/common/reg_defines.h	642;"	d
+PHY_TEST_PHY_2_RX_LOG_RX_DATA_REG	lib/common/reg_defines.h	643;"	d
+PHY_TEST_PHY_2_RX_LOG_STATUS_REG	lib/common/reg_defines.h	641;"	d
+PHY_TEST_PHY_2_RX_SEQ_NO_REG	lib/common/reg_defines.h	639;"	d
+PHY_TEST_PHY_2_RX_STATUS_REG	lib/common/reg_defines.h	636;"	d
+PHY_TEST_PHY_2_TX_ITER_CNT_REG	lib/common/reg_defines.h	632;"	d
+PHY_TEST_PHY_2_TX_PKT_CNT_REG	lib/common/reg_defines.h	633;"	d
+PHY_TEST_PHY_2_TX_RAND_SEED_REG	lib/common/reg_defines.h	635;"	d
+PHY_TEST_PHY_2_TX_SEQ_NO_REG	lib/common/reg_defines.h	634;"	d
+PHY_TEST_PHY_2_TX_STATUS_REG	lib/common/reg_defines.h	631;"	d
+PHY_TEST_PHY_3_RX_CTRL_REG	lib/common/reg_defines.h	655;"	d
+PHY_TEST_PHY_3_RX_ERR_PKT_CNT_REG	lib/common/reg_defines.h	653;"	d
+PHY_TEST_PHY_3_RX_GOOD_PKT_CNT_REG	lib/common/reg_defines.h	652;"	d
+PHY_TEST_PHY_3_RX_LOG_CTRL_REG	lib/common/reg_defines.h	659;"	d
+PHY_TEST_PHY_3_RX_LOG_EXP_DATA_REG	lib/common/reg_defines.h	657;"	d
+PHY_TEST_PHY_3_RX_LOG_RX_DATA_REG	lib/common/reg_defines.h	658;"	d
+PHY_TEST_PHY_3_RX_LOG_STATUS_REG	lib/common/reg_defines.h	656;"	d
+PHY_TEST_PHY_3_RX_SEQ_NO_REG	lib/common/reg_defines.h	654;"	d
+PHY_TEST_PHY_3_RX_STATUS_REG	lib/common/reg_defines.h	651;"	d
+PHY_TEST_PHY_3_TX_ITER_CNT_REG	lib/common/reg_defines.h	647;"	d
+PHY_TEST_PHY_3_TX_PKT_CNT_REG	lib/common/reg_defines.h	648;"	d
+PHY_TEST_PHY_3_TX_RAND_SEED_REG	lib/common/reg_defines.h	650;"	d
+PHY_TEST_PHY_3_TX_SEQ_NO_REG	lib/common/reg_defines.h	649;"	d
+PHY_TEST_PHY_3_TX_STATUS_REG	lib/common/reg_defines.h	646;"	d
+PHY_TEST_PORT_OFFSET	lib/common/reg_defines.h	593;"	d
+PHY_TEST_SIZE_REG	lib/common/reg_defines.h	597;"	d
+PHY_TEST_STATUS_REG	lib/common/reg_defines.h	595;"	d
+PHY_UNIDIR_ABILITY_BIT_POS	lib/common/reg_defines.h	524;"	d
+PHY_UNIDIR_ENABLE_BIT_POS	lib/common/reg_defines.h	514;"	d
+PROG_CTRL_RESET	lib/common/nf2.h	261;"	d
+PROG_DONE	lib/common/nf2.h	256;"	d
+PROG_FIFO_EMPTY	lib/common/nf2.h	257;"	d
+PROG_INIT	lib/common/nf2.h	255;"	d
+PROG_IN_PROGRESS	lib/common/nf2.h	258;"	d
+PROJ_UNKNOWN	lib/common/nf2util.h	44;"	d
+PTP_ENABLE_MASK_RX_REG	lib/common/reg_defines.h	389;"	d
+PTP_ENABLE_MASK_TX_REG	lib/common/reg_defines.h	390;"	d
+PTP_MASK_RX_REG	lib/common/reg_defines.h	391;"	d
+PTP_MASK_TX_REG	lib/common/reg_defines.h	392;"	d
+PTP_VALID_RX_REG	lib/common/reg_defines.h	387;"	d
+PTP_VALID_TX_REG	lib/common/reg_defines.h	388;"	d
+RATE_LIMIT_0_CTRL_REG	lib/common/reg_defines_openflow_switch.h	37;"	d
+RATE_LIMIT_0_TOKEN_INC_REG	lib/common/reg_defines_openflow_switch.h	39;"	d
+RATE_LIMIT_0_TOKEN_INTERVAL_REG	lib/common/reg_defines_openflow_switch.h	38;"	d
+RATE_LIMIT_1_CTRL_REG	lib/common/reg_defines_openflow_switch.h	42;"	d
+RATE_LIMIT_1_TOKEN_INC_REG	lib/common/reg_defines_openflow_switch.h	44;"	d
+RATE_LIMIT_1_TOKEN_INTERVAL_REG	lib/common/reg_defines_openflow_switch.h	43;"	d
+RATE_LIMIT_2_CTRL_REG	lib/common/reg_defines_openflow_switch.h	46;"	d
+RATE_LIMIT_2_TOKEN_INC_REG	lib/common/reg_defines_openflow_switch.h	48;"	d
+RATE_LIMIT_2_TOKEN_INTERVAL_REG	lib/common/reg_defines_openflow_switch.h	47;"	d
+RATE_LIMIT_3_CTRL_REG	lib/common/reg_defines_openflow_switch.h	50;"	d
+RATE_LIMIT_3_TOKEN_INC_REG	lib/common/reg_defines_openflow_switch.h	52;"	d
+RATE_LIMIT_3_TOKEN_INTERVAL_REG	lib/common/reg_defines_openflow_switch.h	51;"	d
+RATE_LIMIT_ENABLE_REG	lib/common/reg_defines.h	872;"	d
+RATE_LIMIT_SHIFT_REG	lib/common/reg_defines.h	873;"	d
+READ_REQ	lib/reg_lib/reg_proxy.h	63;"	d
+READ_TEST	tcam_flow_entry.h	19;"	d
+REG_FILE_BASE_ADDR_REG	lib/common/reg_defines.h	661;"	d
+REG_PROXY_H_	lib/reg_lib/reg_proxy.h	42;"	d
+REG_PROXY_SERVER_H_	lib/reg_lib/reg_proxy_server.h	42;"	d
+RESET_CPCI	lib/common/nf2.h	203;"	d
+RESET_MAC_BIT_NUM	lib/common/reg_defines.h	96;"	d
+ROUTER_ARP_SIZE	lib/common/reg_defines.h	683;"	d
+ROUTER_DST_IP_FILTER_TABLE_DEPTH	lib/common/reg_defines.h	684;"	d
+ROUTER_OP_LUT_ARP_LUT_RD_ADDR_REG	lib/common/reg_defines.h	689;"	d
+ROUTER_OP_LUT_ARP_LUT_WR_ADDR_REG	lib/common/reg_defines.h	690;"	d
+ROUTER_OP_LUT_ARP_MAC_HI_REG	lib/common/reg_defines.h	686;"	d
+ROUTER_OP_LUT_ARP_MAC_LO_REG	lib/common/reg_defines.h	687;"	d
+ROUTER_OP_LUT_ARP_NEXT_HOP_IP_REG	lib/common/reg_defines.h	688;"	d
+ROUTER_OP_LUT_ARP_NUM_MISSES_REG	lib/common/reg_defines.h	709;"	d
+ROUTER_OP_LUT_DST_IP_FILTER_IP_REG	lib/common/reg_defines.h	705;"	d
+ROUTER_OP_LUT_DST_IP_FILTER_RD_ADDR_REG	lib/common/reg_defines.h	706;"	d
+ROUTER_OP_LUT_DST_IP_FILTER_WR_ADDR_REG	lib/common/reg_defines.h	707;"	d
+ROUTER_OP_LUT_LPM_NUM_MISSES_REG	lib/common/reg_defines.h	710;"	d
+ROUTER_OP_LUT_MAC_0_HI_REG	lib/common/reg_defines.h	697;"	d
+ROUTER_OP_LUT_MAC_0_LO_REG	lib/common/reg_defines.h	698;"	d
+ROUTER_OP_LUT_MAC_1_HI_REG	lib/common/reg_defines.h	699;"	d
+ROUTER_OP_LUT_MAC_1_LO_REG	lib/common/reg_defines.h	700;"	d
+ROUTER_OP_LUT_MAC_2_HI_REG	lib/common/reg_defines.h	701;"	d
+ROUTER_OP_LUT_MAC_2_LO_REG	lib/common/reg_defines.h	702;"	d
+ROUTER_OP_LUT_MAC_3_HI_REG	lib/common/reg_defines.h	703;"	d
+ROUTER_OP_LUT_MAC_3_LO_REG	lib/common/reg_defines.h	704;"	d
+ROUTER_OP_LUT_NUM_BAD_CHKSUMS_REG	lib/common/reg_defines.h	713;"	d
+ROUTER_OP_LUT_NUM_BAD_OPTS_VER_REG	lib/common/reg_defines.h	712;"	d
+ROUTER_OP_LUT_NUM_BAD_TTLS_REG	lib/common/reg_defines.h	714;"	d
+ROUTER_OP_LUT_NUM_CPU_PKTS_SENT_REG	lib/common/reg_defines.h	711;"	d
+ROUTER_OP_LUT_NUM_FILTERED_PKTS_REG	lib/common/reg_defines.h	718;"	d
+ROUTER_OP_LUT_NUM_NON_IP_RCVD_REG	lib/common/reg_defines.h	715;"	d
+ROUTER_OP_LUT_NUM_PKTS_FORWARDED_REG	lib/common/reg_defines.h	716;"	d
+ROUTER_OP_LUT_NUM_WRONG_DEST_REG	lib/common/reg_defines.h	717;"	d
+ROUTER_OP_LUT_RT_IP_REG	lib/common/reg_defines.h	691;"	d
+ROUTER_OP_LUT_RT_LUT_RD_ADDR_REG	lib/common/reg_defines.h	695;"	d
+ROUTER_OP_LUT_RT_LUT_WR_ADDR_REG	lib/common/reg_defines.h	696;"	d
+ROUTER_OP_LUT_RT_MASK_REG	lib/common/reg_defines.h	692;"	d
+ROUTER_OP_LUT_RT_NEXT_HOP_IP_REG	lib/common/reg_defines.h	693;"	d
+ROUTER_OP_LUT_RT_OUTPUT_PORT_REG	lib/common/reg_defines.h	694;"	d
+ROUTER_RT_SIZE	lib/common/reg_defines.h	682;"	d
+RX_QUEUE_0_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	256;"	d
+RX_QUEUE_0_NUM_PKTS_DEQUEUED_REG	lib/common/reg_defines.h	257;"	d
+RX_QUEUE_0_NUM_PKTS_DROPPED_BAD_REG	lib/common/reg_defines.h	254;"	d
+RX_QUEUE_0_NUM_PKTS_DROPPED_FULL_REG	lib/common/reg_defines.h	253;"	d
+RX_QUEUE_0_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	258;"	d
+RX_QUEUE_0_NUM_PKTS_STORED_REG	lib/common/reg_defines.h	252;"	d
+RX_QUEUE_0_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	255;"	d
+RX_QUEUE_1_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	270;"	d
+RX_QUEUE_1_NUM_PKTS_DEQUEUED_REG	lib/common/reg_defines.h	271;"	d
+RX_QUEUE_1_NUM_PKTS_DROPPED_BAD_REG	lib/common/reg_defines.h	268;"	d
+RX_QUEUE_1_NUM_PKTS_DROPPED_FULL_REG	lib/common/reg_defines.h	267;"	d
+RX_QUEUE_1_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	272;"	d
+RX_QUEUE_1_NUM_PKTS_STORED_REG	lib/common/reg_defines.h	266;"	d
+RX_QUEUE_1_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	269;"	d
+RX_QUEUE_2_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	284;"	d
+RX_QUEUE_2_NUM_PKTS_DEQUEUED_REG	lib/common/reg_defines.h	285;"	d
+RX_QUEUE_2_NUM_PKTS_DROPPED_BAD_REG	lib/common/reg_defines.h	282;"	d
+RX_QUEUE_2_NUM_PKTS_DROPPED_FULL_REG	lib/common/reg_defines.h	281;"	d
+RX_QUEUE_2_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	286;"	d
+RX_QUEUE_2_NUM_PKTS_STORED_REG	lib/common/reg_defines.h	280;"	d
+RX_QUEUE_2_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	283;"	d
+RX_QUEUE_3_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	298;"	d
+RX_QUEUE_3_NUM_PKTS_DEQUEUED_REG	lib/common/reg_defines.h	299;"	d
+RX_QUEUE_3_NUM_PKTS_DROPPED_BAD_REG	lib/common/reg_defines.h	296;"	d
+RX_QUEUE_3_NUM_PKTS_DROPPED_FULL_REG	lib/common/reg_defines.h	295;"	d
+RX_QUEUE_3_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	300;"	d
+RX_QUEUE_3_NUM_PKTS_STORED_REG	lib/common/reg_defines.h	294;"	d
+RX_QUEUE_3_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	297;"	d
+RX_QUEUE_DISABLE_BIT_NUM	lib/common/reg_defines.h	95;"	d
+ReadCommandFile	commands.c	/^int ReadCommandFile(char ** const buff, const unsigned int spec, const char * const filename)$/;"	f
+SA	lib/reg_lib/reg_proxy.h	77;"	d
+SERIAL_TEST_CONTROL_0_REG	lib/common/reg_defines.h	534;"	d
+SERIAL_TEST_CONTROL_1_REG	lib/common/reg_defines.h	540;"	d
+SERIAL_TEST_CTRL_REG	lib/common/reg_defines.h	547;"	d
+SERIAL_TEST_NUM_FRAMES_RCVD_0_HI_REG	lib/common/reg_defines.h	539;"	d
+SERIAL_TEST_NUM_FRAMES_RCVD_0_LO_REG	lib/common/reg_defines.h	537;"	d
+SERIAL_TEST_NUM_FRAMES_RCVD_1_HI_REG	lib/common/reg_defines.h	545;"	d
+SERIAL_TEST_NUM_FRAMES_RCVD_1_LO_REG	lib/common/reg_defines.h	543;"	d
+SERIAL_TEST_NUM_FRAMES_SENT_0_HI_REG	lib/common/reg_defines.h	538;"	d
+SERIAL_TEST_NUM_FRAMES_SENT_0_LO_REG	lib/common/reg_defines.h	536;"	d
+SERIAL_TEST_NUM_FRAMES_SENT_1_HI_REG	lib/common/reg_defines.h	544;"	d
+SERIAL_TEST_NUM_FRAMES_SENT_1_LO_REG	lib/common/reg_defines.h	542;"	d
+SERIAL_TEST_STATUS_0_REG	lib/common/reg_defines.h	535;"	d
+SERIAL_TEST_STATUS_1_REG	lib/common/reg_defines.h	541;"	d
+SERIAL_TEST_STAT_REG	lib/common/reg_defines.h	548;"	d
+SERVER_IP_ADDR	lib/reg_lib/reg_proxy.h	60;"	d
+SERVER_PORT	lib/reg_lib/reg_proxy.h	61;"	d
+SIOCREGREAD	lib/common/nf2.h	451;"	d
+SIOCREGWRITE	lib/common/nf2.h	452;"	d
+SRAM_1_BASE	lib/common/nf2.h	102;"	d
+SRAM_1_MAX	lib/common/nf2.h	103;"	d
+SRAM_2_BASE	lib/common/nf2.h	105;"	d
+SRAM_2_MAX	lib/common/nf2.h	106;"	d
+SRAM_ADDR_WIDTH	lib/common/reg_defines.h	249;"	d
+SRAM_BASE_ADDR	lib/common/reg_defines.h	663;"	d
+SRAM_BASE_ADDR_REG	lib/common/reg_defines.h	248;"	d
+SRAM_LSB_1_BASE_ADDR	lib/common/reg_defines.h	550;"	d
+SRAM_LSB_2_BASE_ADDR	lib/common/reg_defines.h	551;"	d
+SRAM_MSB_SRAM1_RD_REG	lib/common/reg_defines.h	553;"	d
+SRAM_MSB_SRAM1_WR_REG	lib/common/reg_defines.h	554;"	d
+SRAM_MSB_SRAM2_RD_REG	lib/common/reg_defines.h	555;"	d
+SRAM_MSB_SRAM2_WR_REG	lib/common/reg_defines.h	556;"	d
+SRAM_SIZE	lib/common/nf2.h	100;"	d
+SRAM_TEST_BAD_RUNS_REG	lib/common/reg_defines.h	560;"	d
+SRAM_TEST_CTRL_REG	lib/common/reg_defines.h	564;"	d
+SRAM_TEST_EN_REG	lib/common/reg_defines.h	563;"	d
+SRAM_TEST_ERR_CNT_REG	lib/common/reg_defines.h	558;"	d
+SRAM_TEST_GOOD_RUNS_REG	lib/common/reg_defines.h	561;"	d
+SRAM_TEST_ITER_NUM_REG	lib/common/reg_defines.h	559;"	d
+SRAM_TEST_LOG_ADDR_REG	lib/common/reg_defines.h	570;"	d
+SRAM_TEST_LOG_EXP_DATA_HI_REG	lib/common/reg_defines.h	571;"	d
+SRAM_TEST_LOG_EXP_DATA_LO_REG	lib/common/reg_defines.h	572;"	d
+SRAM_TEST_LOG_OFFSET	lib/common/reg_defines.h	568;"	d
+SRAM_TEST_LOG_RD_DATA_HI_REG	lib/common/reg_defines.h	573;"	d
+SRAM_TEST_LOG_RD_DATA_LO_REG	lib/common/reg_defines.h	574;"	d
+SRAM_TEST_RAND_SEED_1_REG	lib/common/reg_defines.h	565;"	d
+SRAM_TEST_RAND_SEED_2_REG	lib/common/reg_defines.h	566;"	d
+SRAM_TEST_STATUS_REG	lib/common/reg_defines.h	562;"	d
+SRCS	lib/reg_lib/Makefile	/^SRCS = reg_proxy_server.c reg_proxy_client.c reg_proxy.c $(COMMON)\/nf2util_proxy_common.c$/;"	m
+STAMP_COUNTER_1_2_REG_LOAD	lib/common/reg_defines.h	493;"	d
+STAMP_COUNTER_1_REG	lib/common/reg_defines.h	489;"	d
+STAMP_COUNTER_2_REG	lib/common/reg_defines.h	490;"	d
+STAMP_COUNTER_3_4_REG_LOAD	lib/common/reg_defines.h	494;"	d
+STAMP_COUNTER_3_REG	lib/common/reg_defines.h	491;"	d
+STAMP_COUNTER_4_REG	lib/common/reg_defines.h	492;"	d
+STAMP_COUNTER_BIT_31_0	lib/common/reg_defines.h	502;"	d
+STAMP_COUNTER_BIT_63_32	lib/common/reg_defines.h	500;"	d
+STAMP_COUNTER_BIT_95_64	lib/common/reg_defines.h	498;"	d
+STAMP_COUNTER_READ_ENABLE	lib/common/reg_defines.h	496;"	d
+SWITCH_OP_LUT_MAC_LO_REG	lib/common/reg_defines.h	676;"	d
+SWITCH_OP_LUT_MAC_LUT_RD_ADDR_REG	lib/common/reg_defines.h	679;"	d
+SWITCH_OP_LUT_MAC_LUT_WR_ADDR_REG	lib/common/reg_defines.h	680;"	d
+SWITCH_OP_LUT_NUM_HITS_REG	lib/common/reg_defines.h	677;"	d
+SWITCH_OP_LUT_NUM_MISSES_REG	lib/common/reg_defines.h	678;"	d
+SWITCH_OP_LUT_PORTS_MAC_HI_REG	lib/common/reg_defines.h	675;"	d
+T0_OPENFLOW_LOOKUP_DUMY_SOFTWARE_0_REG	lib/common/reg_defines_openflow_switch.h	67;"	d
+T0_OPENFLOW_LOOKUP_DUMY_SOFTWARE_1_REG	lib/common/reg_defines_openflow_switch.h	68;"	d
+T0_OPENFLOW_LOOKUP_EXACT_HITS_REG	lib/common/reg_defines_openflow_switch.h	58;"	d
+T0_OPENFLOW_LOOKUP_EXACT_MISSES_REG	lib/common/reg_defines_openflow_switch.h	57;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_0_REG	lib/common/reg_defines_openflow_switch.h	59;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_1_REG	lib/common/reg_defines_openflow_switch.h	60;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_2_REG	lib/common/reg_defines_openflow_switch.h	61;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_3_REG	lib/common/reg_defines_openflow_switch.h	62;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_4_REG	lib/common/reg_defines_openflow_switch.h	63;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_5_REG	lib/common/reg_defines_openflow_switch.h	64;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_6_REG	lib/common/reg_defines_openflow_switch.h	65;"	d
+T0_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_7_REG	lib/common/reg_defines_openflow_switch.h	66;"	d
+T0_OPENFLOW_LOOKUP_TIMER_REG	lib/common/reg_defines_openflow_switch.h	69;"	d
+T0_OPENFLOW_LOOKUP_WILDCARD_HITS_REG	lib/common/reg_defines_openflow_switch.h	56;"	d
+T0_OPENFLOW_LOOKUP_WILDCARD_MISSES_REG	lib/common/reg_defines_openflow_switch.h	55;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_0_REG	lib/common/reg_defines_openflow_switch.h	2;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_1_REG	lib/common/reg_defines_openflow_switch.h	3;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_2_REG	lib/common/reg_defines_openflow_switch.h	4;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_3_REG	lib/common/reg_defines_openflow_switch.h	5;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_4_REG	lib/common/reg_defines_openflow_switch.h	6;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_5_REG	lib/common/reg_defines_openflow_switch.h	7;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_6_REG	lib/common/reg_defines_openflow_switch.h	8;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_7_REG	lib/common/reg_defines_openflow_switch.h	9;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_8_REG	lib/common/reg_defines_openflow_switch.h	10;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_ACTION_9_REG	lib/common/reg_defines_openflow_switch.h	11;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_0_REG	lib/common/reg_defines_openflow_switch.h	71;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_10_REG	lib/common/reg_defines_openflow_switch.h	81;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_11_REG	lib/common/reg_defines_openflow_switch.h	82;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_12_REG	lib/common/reg_defines_openflow_switch.h	83;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_13_REG	lib/common/reg_defines_openflow_switch.h	84;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_14_REG	lib/common/reg_defines_openflow_switch.h	85;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_15_REG	lib/common/reg_defines_openflow_switch.h	86;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_1_REG	lib/common/reg_defines_openflow_switch.h	72;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_2_REG	lib/common/reg_defines_openflow_switch.h	73;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_3_REG	lib/common/reg_defines_openflow_switch.h	74;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_4_REG	lib/common/reg_defines_openflow_switch.h	75;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_5_REG	lib/common/reg_defines_openflow_switch.h	76;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_6_REG	lib/common/reg_defines_openflow_switch.h	77;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_7_REG	lib/common/reg_defines_openflow_switch.h	78;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_8_REG	lib/common/reg_defines_openflow_switch.h	79;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_9_REG	lib/common/reg_defines_openflow_switch.h	80;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_CMP_0_REG	lib/common/reg_defines_openflow_switch.h	14;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_CMP_1_REG	lib/common/reg_defines_openflow_switch.h	15;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_CMP_MASK_0_REG	lib/common/reg_defines_openflow_switch.h	12;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_CMP_MASK_1_REG	lib/common/reg_defines_openflow_switch.h	13;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_DUMMY_1_REG	lib/common/reg_defines_openflow_switch.h	103;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_DUMMY_2_REG	lib/common/reg_defines_openflow_switch.h	104;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_0_REG	lib/common/reg_defines_openflow_switch.h	105;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_10_REG	lib/common/reg_defines_openflow_switch.h	115;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_11_REG	lib/common/reg_defines_openflow_switch.h	116;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_12_REG	lib/common/reg_defines_openflow_switch.h	117;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_13_REG	lib/common/reg_defines_openflow_switch.h	118;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_14_REG	lib/common/reg_defines_openflow_switch.h	119;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_15_REG	lib/common/reg_defines_openflow_switch.h	120;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_1_REG	lib/common/reg_defines_openflow_switch.h	106;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_2_REG	lib/common/reg_defines_openflow_switch.h	107;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_3_REG	lib/common/reg_defines_openflow_switch.h	108;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_4_REG	lib/common/reg_defines_openflow_switch.h	109;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_5_REG	lib/common/reg_defines_openflow_switch.h	110;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_6_REG	lib/common/reg_defines_openflow_switch.h	111;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_7_REG	lib/common/reg_defines_openflow_switch.h	112;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_8_REG	lib/common/reg_defines_openflow_switch.h	113;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_9_REG	lib/common/reg_defines_openflow_switch.h	114;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_0_REG	lib/common/reg_defines_openflow_switch.h	87;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_10_REG	lib/common/reg_defines_openflow_switch.h	97;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_11_REG	lib/common/reg_defines_openflow_switch.h	98;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_12_REG	lib/common/reg_defines_openflow_switch.h	99;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_13_REG	lib/common/reg_defines_openflow_switch.h	100;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_14_REG	lib/common/reg_defines_openflow_switch.h	101;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_15_REG	lib/common/reg_defines_openflow_switch.h	102;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_1_REG	lib/common/reg_defines_openflow_switch.h	88;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_2_REG	lib/common/reg_defines_openflow_switch.h	89;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_3_REG	lib/common/reg_defines_openflow_switch.h	90;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_4_REG	lib/common/reg_defines_openflow_switch.h	91;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_5_REG	lib/common/reg_defines_openflow_switch.h	92;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_6_REG	lib/common/reg_defines_openflow_switch.h	93;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_7_REG	lib/common/reg_defines_openflow_switch.h	94;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_8_REG	lib/common/reg_defines_openflow_switch.h	95;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_9_REG	lib/common/reg_defines_openflow_switch.h	96;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_READ_ADDR_REG	lib/common/reg_defines_openflow_switch.h	16;"	d
+T0_OPENFLOW_WILDCARD_LOOKUP_WRITE_ADDR_REG	lib/common/reg_defines_openflow_switch.h	17;"	d
+T1_OPENFLOW_LOOKUP_DUMY_SOFTWARE_0_REG	lib/common/reg_defines_openflow_switch.h	135;"	d
+T1_OPENFLOW_LOOKUP_DUMY_SOFTWARE_1_REG	lib/common/reg_defines_openflow_switch.h	136;"	d
+T1_OPENFLOW_LOOKUP_EXACT_HITS_REG	lib/common/reg_defines_openflow_switch.h	126;"	d
+T1_OPENFLOW_LOOKUP_EXACT_MISSES_REG	lib/common/reg_defines_openflow_switch.h	125;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_0_REG	lib/common/reg_defines_openflow_switch.h	127;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_1_REG	lib/common/reg_defines_openflow_switch.h	128;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_2_REG	lib/common/reg_defines_openflow_switch.h	129;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_3_REG	lib/common/reg_defines_openflow_switch.h	130;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_4_REG	lib/common/reg_defines_openflow_switch.h	131;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_5_REG	lib/common/reg_defines_openflow_switch.h	132;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_6_REG	lib/common/reg_defines_openflow_switch.h	133;"	d
+T1_OPENFLOW_LOOKUP_NUM_PKTS_DROPPED_7_REG	lib/common/reg_defines_openflow_switch.h	134;"	d
+T1_OPENFLOW_LOOKUP_TIMER_REG	lib/common/reg_defines_openflow_switch.h	137;"	d
+T1_OPENFLOW_LOOKUP_WILDCARD_HITS_REG	lib/common/reg_defines_openflow_switch.h	124;"	d
+T1_OPENFLOW_LOOKUP_WILDCARD_MISSES_REG	lib/common/reg_defines_openflow_switch.h	123;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_0_REG	lib/common/reg_defines_openflow_switch.h	19;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_1_REG	lib/common/reg_defines_openflow_switch.h	20;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_2_REG	lib/common/reg_defines_openflow_switch.h	21;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_3_REG	lib/common/reg_defines_openflow_switch.h	22;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_4_REG	lib/common/reg_defines_openflow_switch.h	23;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_5_REG	lib/common/reg_defines_openflow_switch.h	24;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_6_REG	lib/common/reg_defines_openflow_switch.h	25;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_7_REG	lib/common/reg_defines_openflow_switch.h	26;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_8_REG	lib/common/reg_defines_openflow_switch.h	27;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_ACTION_9_REG	lib/common/reg_defines_openflow_switch.h	28;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_0_REG	lib/common/reg_defines_openflow_switch.h	139;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_10_REG	lib/common/reg_defines_openflow_switch.h	149;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_11_REG	lib/common/reg_defines_openflow_switch.h	150;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_12_REG	lib/common/reg_defines_openflow_switch.h	151;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_13_REG	lib/common/reg_defines_openflow_switch.h	152;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_14_REG	lib/common/reg_defines_openflow_switch.h	153;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_15_REG	lib/common/reg_defines_openflow_switch.h	154;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_1_REG	lib/common/reg_defines_openflow_switch.h	140;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_2_REG	lib/common/reg_defines_openflow_switch.h	141;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_3_REG	lib/common/reg_defines_openflow_switch.h	142;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_4_REG	lib/common/reg_defines_openflow_switch.h	143;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_5_REG	lib/common/reg_defines_openflow_switch.h	144;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_6_REG	lib/common/reg_defines_openflow_switch.h	145;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_7_REG	lib/common/reg_defines_openflow_switch.h	146;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_8_REG	lib/common/reg_defines_openflow_switch.h	147;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_BYTES_HIT_9_REG	lib/common/reg_defines_openflow_switch.h	148;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_CMP_0_REG	lib/common/reg_defines_openflow_switch.h	31;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_CMP_1_REG	lib/common/reg_defines_openflow_switch.h	32;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_CMP_MASK_0_REG	lib/common/reg_defines_openflow_switch.h	29;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_CMP_MASK_1_REG	lib/common/reg_defines_openflow_switch.h	30;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_DUMMY_1_REG	lib/common/reg_defines_openflow_switch.h	171;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_DUMMY_2_REG	lib/common/reg_defines_openflow_switch.h	172;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_0_REG	lib/common/reg_defines_openflow_switch.h	173;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_10_REG	lib/common/reg_defines_openflow_switch.h	183;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_11_REG	lib/common/reg_defines_openflow_switch.h	184;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_12_REG	lib/common/reg_defines_openflow_switch.h	185;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_13_REG	lib/common/reg_defines_openflow_switch.h	186;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_14_REG	lib/common/reg_defines_openflow_switch.h	187;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_15_REG	lib/common/reg_defines_openflow_switch.h	188;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_1_REG	lib/common/reg_defines_openflow_switch.h	174;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_2_REG	lib/common/reg_defines_openflow_switch.h	175;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_3_REG	lib/common/reg_defines_openflow_switch.h	176;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_4_REG	lib/common/reg_defines_openflow_switch.h	177;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_5_REG	lib/common/reg_defines_openflow_switch.h	178;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_6_REG	lib/common/reg_defines_openflow_switch.h	179;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_7_REG	lib/common/reg_defines_openflow_switch.h	180;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_8_REG	lib/common/reg_defines_openflow_switch.h	181;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_LAST_SEEN_TS_9_REG	lib/common/reg_defines_openflow_switch.h	182;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_0_REG	lib/common/reg_defines_openflow_switch.h	155;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_10_REG	lib/common/reg_defines_openflow_switch.h	165;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_11_REG	lib/common/reg_defines_openflow_switch.h	166;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_12_REG	lib/common/reg_defines_openflow_switch.h	167;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_13_REG	lib/common/reg_defines_openflow_switch.h	168;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_14_REG	lib/common/reg_defines_openflow_switch.h	169;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_15_REG	lib/common/reg_defines_openflow_switch.h	170;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_1_REG	lib/common/reg_defines_openflow_switch.h	156;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_2_REG	lib/common/reg_defines_openflow_switch.h	157;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_3_REG	lib/common/reg_defines_openflow_switch.h	158;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_4_REG	lib/common/reg_defines_openflow_switch.h	159;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_5_REG	lib/common/reg_defines_openflow_switch.h	160;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_6_REG	lib/common/reg_defines_openflow_switch.h	161;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_7_REG	lib/common/reg_defines_openflow_switch.h	162;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_8_REG	lib/common/reg_defines_openflow_switch.h	163;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_PKTS_HIT_9_REG	lib/common/reg_defines_openflow_switch.h	164;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_READ_ADDR_REG	lib/common/reg_defines_openflow_switch.h	33;"	d
+T1_OPENFLOW_WILDCARD_LOOKUP_WRITE_ADDR_REG	lib/common/reg_defines_openflow_switch.h	34;"	d
+TABLE_DEPTH	defination.h	8;"	d
+TX_QUEUE_0_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	262;"	d
+TX_QUEUE_0_NUM_PKTS_ENQUEUED_REG	lib/common/reg_defines.h	263;"	d
+TX_QUEUE_0_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	259;"	d
+TX_QUEUE_0_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	260;"	d
+TX_QUEUE_0_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	261;"	d
+TX_QUEUE_1_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	276;"	d
+TX_QUEUE_1_NUM_PKTS_ENQUEUED_REG	lib/common/reg_defines.h	277;"	d
+TX_QUEUE_1_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	273;"	d
+TX_QUEUE_1_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	274;"	d
+TX_QUEUE_1_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	275;"	d
+TX_QUEUE_2_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	290;"	d
+TX_QUEUE_2_NUM_PKTS_ENQUEUED_REG	lib/common/reg_defines.h	291;"	d
+TX_QUEUE_2_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	287;"	d
+TX_QUEUE_2_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	288;"	d
+TX_QUEUE_2_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	289;"	d
+TX_QUEUE_3_NUM_BYTES_PUSHED_REG	lib/common/reg_defines.h	304;"	d
+TX_QUEUE_3_NUM_PKTS_ENQUEUED_REG	lib/common/reg_defines.h	305;"	d
+TX_QUEUE_3_NUM_PKTS_IN_QUEUE_REG	lib/common/reg_defines.h	301;"	d
+TX_QUEUE_3_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	302;"	d
+TX_QUEUE_3_NUM_WORDS_PUSHED_REG	lib/common/reg_defines.h	303;"	d
+TX_QUEUE_DISABLE_BIT_NUM	lib/common/reg_defines.h	94;"	d
+TableAddr	defination.h	/^static uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};$/;"	v
 TableInfor	commands.h	/^    FlowEntry TableInfor[5];$/;"	m	struct:Command
-TableInforInit	commands.h	/^    int TableInforInit(){$/;"	f	struct:Command
-TableName	defination.h	/^const char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};$/;"	v
-TransferCommands	commands.h	/^int TransferCommands(char *Commands[MAX_DEPTH],int line_num){$/;"	f
+TableInforInit	commands.c	/^void TableInforInit(FlowEntry TableInfor[5]){$/;"	f
+TableName	defination.h	/^static char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};$/;"	v
+TransferCommands	commands.c	/^int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][10]){$/;"	f
+VERSION_ANY	lib/common/nf2util.h	46;"	d
+WRITE_REQ	lib/reg_lib/reg_proxy.h	64;"	d
+_COMMANDS_H	commands.h	2;"	d
+_DEFINATION_H	defination.h	2;"	d
+_NF2UTIL_H	lib/common/nf2util.h	36;"	d
+_NF2_H	lib/common/nf2.h	36;"	d
+_REG_DEFINES_	lib/common/reg_defines.h	44;"	d
+_TCAM_FLOW_ENTRY_	tcam_flow_entry.h	2;"	d
+_UTIL_H	lib/common/util.h	36;"	d
+address	lib/reg_lib/reg_proxy.h	/^	uint32_t   address;$/;"	m	struct:reg_request
+checkVirtexBitfile	lib/common/nf2util_proxy_common.c	/^int checkVirtexBitfile(struct nf2device *nf2, char *projDir,$/;"	f
+check_iface	lib/common/nf2util.c	/^int check_iface(struct nf2device *nf2)$/;"	f
+check_iface	lib/reg_lib/reg_proxy_client.c	/^int check_iface(struct nf2device *nf2)$/;"	f
+cksm	lib/common/util.c	/^uint16_t cksm(int length, uint32_t buf[]) {$/;"	f
+closeDescriptor	lib/common/nf2util.c	/^int closeDescriptor(struct nf2device *nf2)$/;"	f
+closeDescriptor	lib/reg_lib/reg_proxy_client.c	/^int closeDescriptor(struct nf2device *nf2)$/;"	f
+close_interfaces	lib/reg_lib/reg_proxy_server.c	/^void close_interfaces(struct nf2device **nf2devices, int num_netfpgas) {$/;"	f
+connectRegServer	lib/reg_lib/reg_proxy_client.c	/^static int connectRegServer(struct nf2device* nf2){$/;"	f	file:
+cpci_revision	lib/common/nf2util_proxy_common.c	/^unsigned cpci_revision = -1;$/;"	v
+cpci_version	lib/common/nf2util_proxy_common.c	/^unsigned cpci_version = -1;$/;"	v
+data	lib/reg_lib/reg_proxy.h	/^	uint32_t   data;$/;"	m	struct:reg_request
+device_name	lib/common/nf2util.h	/^	char *device_name;$/;"	m	struct:nf2device
+device_name	lib/common/nft_struct.h	/^	char *device_name;$/;"	m	struct:nf2device
+device_num	lib/reg_lib/reg_proxy.h	/^	uint8_t    device_num;$/;"	m	struct:reg_request
+disconnectRegServer	lib/reg_lib/reg_proxy_client.c	/^static void disconnectRegServer(int socket_to_server) {$/;"	f	file:
+dprint_req	lib/reg_lib/reg_proxy.c	/^void dprint_req(struct reg_request *req) {$/;"	f
+error	lib/reg_lib/reg_proxy.h	/^	int8_t     error;$/;"	m	struct:reg_request
+fd	lib/common/nf2util.h	/^	int fd;$/;"	m	struct:nf2device
+fd	lib/common/nft_struct.h	/^	int fd;$/;"	m	struct:nf2device
 flow_entry_len	defination.h	/^typedef struct flow_entry_len{$/;"	s
+force_cnet	lib/reg_lib/client_test.c	/^static int force_cnet = 0;$/;"	v	file:
+getCPCIRevision	lib/common/nf2util_proxy_common.c	/^unsigned getCPCIRevision(struct nf2device *nf2) {$/;"	f
+getCPCIVersion	lib/common/nf2util_proxy_common.c	/^unsigned getCPCIVersion(struct nf2device *nf2) {$/;"	f
+getDeviceCPCIRevision	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceCPCIRevision(struct nf2device *nf2) {$/;"	f
+getDeviceCPCIVersion	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceCPCIVersion(struct nf2device *nf2) {$/;"	f
+getDeviceID	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceID(struct nf2device *nf2) {$/;"	f
+getDeviceIDModuleVersion	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceIDModuleVersion(struct nf2device *nf2) {$/;"	f
+getDeviceInfoStr	lib/common/nf2util_proxy_common.c	/^const char* getDeviceInfoStr(struct nf2device *nf2)$/;"	f
+getDeviceMajor	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceMajor(struct nf2device *nf2) {$/;"	f
+getDeviceMinor	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceMinor(struct nf2device *nf2) {$/;"	f
+getDeviceRevision	lib/common/nf2util_proxy_common.c	/^unsigned getDeviceRevision(struct nf2device *nf2) {$/;"	f
+getProjDesc	lib/common/nf2util_proxy_common.c	/^const char* getProjDesc(struct nf2device *nf2) {$/;"	f
+getProjDir	lib/common/nf2util_proxy_common.c	/^const char* getProjDir(struct nf2device *nf2) {$/;"	f
+getProjName	lib/common/nf2util_proxy_common.c	/^const char* getProjName(struct nf2device *nf2) {$/;"	f
+getVirtexBitfileErr	lib/common/nf2util_proxy_common.c	/^const char *getVirtexBitfileErr() {$/;"	f
+have_version_info	lib/common/nf2util_proxy_common.c	/^char have_version_info = 0;$/;"	v
 id	commands.h	/^    enum ofp_exp_tb_match_type id;$/;"	m	struct:Command	typeref:enum:Command::ofp_exp_tb_match_type
+isVirtexProgrammed	lib/common/nf2util_proxy_common.c	/^int isVirtexProgrammed(struct nf2device *nf2)$/;"	f
 key	commands.h	/^    uint32_t key[10];$/;"	m	struct:Command
 key_len	defination.h	/^    int key_len[5];   \/\/bit$/;"	m	struct:flow_entry_len
 key_num	defination.h	/^    int key_num;$/;"	m	struct:flow_entry_len
-main	main.cpp	/^int main(){$/;"	f
+main	lib/reg_lib/client_test.c	/^int main(int argc, char **argv)$/;"	f
+main	lib/reg_lib/reg_proxy_server.c	/^int main(int argc, char** argv) {$/;"	f
+main	main.c	/^int main(){$/;"	f
+main	tcam_flow_entry.c	/^int main()$/;"	f
 mask	commands.h	/^    uint32_t mask[10];$/;"	m	struct:Command
+net_iface	lib/common/nf2util.h	/^	int net_iface;$/;"	m	struct:nf2device
+net_iface	lib/common/nft_struct.h	/^	int net_iface;$/;"	m	struct:nf2device
+nf2	lib/reg_lib/client_test.c	/^static struct nf2device nf2;$/;"	v	typeref:struct:nf2device	file:
+nf2_cpci_revision	lib/common/nf2util_proxy_common.c	/^unsigned nf2_cpci_revision = -1;$/;"	v
+nf2_cpci_version	lib/common/nf2util_proxy_common.c	/^unsigned nf2_cpci_version = -1;$/;"	v
+nf2_dev_id_module_version	lib/common/nf2util_proxy_common.c	/^unsigned nf2_dev_id_module_version = -1;$/;"	v
+nf2_device_id	lib/common/nf2util_proxy_common.c	/^unsigned nf2_device_id = -1;$/;"	v
+nf2_device_str	lib/common/nf2util_proxy_common.c	/^char nf2_device_str[DEVICE_STR_LEN] = "";$/;"	v
+nf2_proj_desc	lib/common/nf2util_proxy_common.c	/^char nf2_proj_desc[DEV_ID_PROJ_DESC_BYTE_LEN] = "";$/;"	v
+nf2_proj_dir	lib/common/nf2util_proxy_common.c	/^char nf2_proj_dir[DEV_ID_PROJ_DIR_BYTE_LEN] = "";$/;"	v
+nf2_proj_name	lib/common/nf2util_proxy_common.c	/^char nf2_proj_name[DEV_ID_PROJ_NAME_BYTE_LEN] = "";$/;"	v
+nf2_proj_name_v1	lib/common/nf2util_proxy_common.c	/^char nf2_proj_name_v1[DEV_ID_PROJ_NAME_BYTE_LEN_V1] = "";$/;"	v
+nf2_read_info	lib/common/nf2util_proxy_common.c	/^void nf2_read_info(struct nf2device *nf2)$/;"	f
+nf2_revision	lib/common/nf2util_proxy_common.c	/^unsigned nf2_revision = -1;$/;"	v
+nf2_version	lib/common/nf2util_proxy_common.c	/^unsigned nf2_version = -1;$/;"	v
+nf2_version_err	lib/common/nf2util_proxy_common.c	/^char nf2_version_err[DEVICE_INFO_STR_LEN] = "";$/;"	v
+nf2device	lib/common/nf2util.h	/^struct nf2device {$/;"	s
+nf2device	lib/common/nft_struct.h	/^struct nf2device {$/;"	s
+nf2device_id	lib/common/nf2util_proxy_common.c	/^unsigned nf2device_id = -1;$/;"	v
+nf2device_info	lib/common/nf2util_proxy_common.c	/^char nf2device_info[DEVICE_INFO_STR_LEN] = "";$/;"	v
+nf2reg	lib/common/nf2.h	/^struct nf2reg {$/;"	s
 nop	defination.h	/^    nop             = 0,$/;"	e	enum:table_operation
 ofp_exp_tb_match_type	defination.h	/^enum ofp_exp_tb_match_type {$/;"	g
 op	commands.h	/^    enum table_operation op;$/;"	m	struct:Command	typeref:enum:Command::table_operation
+openDescriptor	lib/common/nf2util.c	/^int openDescriptor(struct nf2device *nf2)$/;"	f
+openDescriptor	lib/reg_lib/reg_proxy_client.c	/^int openDescriptor(struct nf2device *nf2)$/;"	f
+open_interfaces	lib/reg_lib/reg_proxy_server.c	/^void open_interfaces(struct nf2device **nf2devices, int num_netfpgas) {$/;"	f
+parse_request	lib/reg_lib/reg_proxy_server.c	/^int parse_request(int socket_to_client, struct nf2device **nf2devices,$/;"	f
+parseip	lib/common/util.c	/^uint8_t * parseip(char *str) {$/;"	f
+parsemac	lib/common/util.c	/^uint8_t * parsemac(char *str) {$/;"	f
+prepDeviceInfo	lib/common/nf2util_proxy_common.c	/^void prepDeviceInfo(struct nf2device *nf2) {$/;"	f
+prev_dev	lib/common/nf2util_proxy_common.c	/^struct nf2device prev_dev;$/;"	v	typeref:struct:nf2device
+print	lib/reg_lib/client_test.c	/^static inline void print(unsigned val_in) {$/;"	f	file:
+printHello	lib/common/nf2util_proxy_common.c	/^void printHello (struct nf2device *nf2, int *val)$/;"	f
 priority	commands.h	/^    uint16_t priority;$/;"	m	struct:Command
-show	commands.h	/^    void show(){$/;"	f	struct:Command
+readReg	lib/common/nf2util.c	/^int readReg(struct nf2device *nf2, unsigned reg, unsigned *val)$/;"	f
+readReg	lib/reg_lib/reg_proxy_client.c	/^int readReg(struct nf2device *nf2, unsigned reg, unsigned *val)$/;"	f
+readStr	lib/common/nf2util_proxy_common.c	/^static void readStr(struct nf2device *nf2, unsigned regStart, unsigned len, char *dst)$/;"	f	file:
+read_info	lib/common/nf2util_proxy_common.c	/^void read_info(struct nf2device *nf2)$/;"	f
+readn	lib/reg_lib/reg_proxy.c	/^ssize_t readn(int sockfd, char *ptr, size_t len){$/;"	f
+reg	lib/common/nf2.h	/^	unsigned int	reg;$/;"	m	struct:nf2reg
+reg_request	lib/reg_lib/reg_proxy.h	/^struct reg_request {$/;"	s
+sendRequest	lib/reg_lib/reg_proxy_client.c	/^static int sendRequest(int socket_to_server, struct reg_request *reg_request) {$/;"	f	file:
+server_ip_addr	lib/common/nf2util.h	/^    char server_ip_addr[MAX_IPADDR_LEN];$/;"	m	struct:nf2device
+server_ip_addr	lib/common/nft_struct.h	/^    char server_ip_addr[MAX_IPADDR_LEN];$/;"	m	struct:nf2device
+server_port_num	lib/common/nf2util.h	/^    int server_port_num;$/;"	m	struct:nf2device
+server_port_num	lib/common/nft_struct.h	/^    int server_port_num;$/;"	m	struct:nf2device
+show	commands.c	/^void show(Command *entry){$/;"	f
 table_add	defination.h	/^    table_add       = 1,$/;"	e	enum:table_operation
 table_del	defination.h	/^    table_del       = 2,$/;"	e	enum:table_operation
 table_operation	defination.h	/^enum table_operation{$/;"	g
@@ -40,6 +1377,13 @@ tb_match_L3	defination.h	/^    tb_match_L3         = 2,$/;"	e	enum:ofp_exp_tb_ma
 tb_match_QinQ	defination.h	/^    tb_match_QinQ       = 0,$/;"	e	enum:ofp_exp_tb_match_type
 tb_match_extL2	defination.h	/^    tb_match_extL2      = 4,$/;"	e	enum:ofp_exp_tb_match_type
 tb_match_pppL2	defination.h	/^    tb_match_pppL2      = 3,$/;"	e	enum:ofp_exp_tb_match_type
+type	lib/reg_lib/reg_proxy.h	/^	uint8_t    type;$/;"	m	struct:reg_request
+val	lib/common/nf2.h	/^	unsigned int	val;$/;"	m	struct:nf2reg
 value	commands.h	/^    uint32_t value[10];$/;"	m	struct:Command
 value_len	defination.h	/^    int value_len[5]; \/\/bit$/;"	m	struct:flow_entry_len
 value_num	defination.h	/^    int value_num;$/;"	m	struct:flow_entry_len
+verbose	lib/reg_lib/client_test.c	/^static int verbose = 0;$/;"	v	file:
+virtex_programmed	lib/common/nf2util_proxy_common.c	/^char virtex_programmed = 0;$/;"	v
+writeReg	lib/common/nf2util.c	/^int writeReg(struct nf2device *nf2, unsigned reg, unsigned val)$/;"	f
+writeReg	lib/reg_lib/reg_proxy_client.c	/^int writeReg(struct nf2device *nf2, unsigned reg, unsigned val)$/;"	f
+writen	lib/reg_lib/reg_proxy.c	/^ssize_t writen(int sockfd, const char *ptr, size_t len) {$/;"	f
