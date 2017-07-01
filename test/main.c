@@ -22,10 +22,10 @@ int main(int argc,int * argv[]){
         Init(entry[i],TableInfor);
         printf("entry %d :\t",i);
         AddEntry(out[i],entry[i],TableInfor);
-        show(entry[i]);
+//        show(entry[i]);
         /* writeReg(); */
 	//        InitTcamFlowEntry(entry[i]);
-        /* AddTcamFlowEntry(entry[i]); */
+	AddTcamFlowEntry(entry[i]); 
     }
 
 
