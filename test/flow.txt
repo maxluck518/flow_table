@@ -1,12 +1,12 @@
-| table_add | qinq   | 3 | 88a809       | ffffff       | 0
-| table_add | qinq   | 4 | 88a800       | ffff00       | 2
-| table_add | domain | 3 | 88640021     | ffffffff     | 1
-| table_add | domain | 4 | 88630000     | ffff0000     | 2
-| table_add | domain | 5 | 88640000     | ffff0000     | 2
-| table_add | domain | 6 | 08000000     | ffff0000     | 4
-| table_add | domain | 7 | 08060000     | ffff0000     | 3
-| table_add | L3     | 3 | c0a863ff     | ffffffff     | 5 | ffeeddccbbaa | 000000000000 | 0000
-| table_add | L3     | 4 | c0a8631b     | ffffffff     | e | aabbccddeeff | 112233445566 | 8888
-| table_add | pppL2  | 3 | ffffffffffff | ffffffffffff | 4 | 1            | 000          | 000
-| table_add | pppL2  | 4 | aabbccddeeff | ffffffffffff | 5 | 2            | 007          | 008
-| table_add | pppL2  | 5 | 112233445566 | ffffffffffff | 4 | 1            | 000          | 000
+| table_add | qinq   | 3 | 88a8         | 09           | ffff | ff           | 0
+| table_add | qinq   | 4 | 88a8         | 00           | ffff | 00           | 2
+| table_add | domain | 3 | 8864         | 0021         | ffff | ffff         | 1
+| table_add | domain | 4 | 8863         | 0000         | ffff | 0000         | 2
+| table_add | domain | 5 | 8864         | 0000         | ffff | 0000         | 2
+| table_add | domain | 6 | 0800         | 0000         | ffff | 0000         | 4
+| table_add | domain | 7 | 0806         | 0000         | ffff | 0000         | 3
+| table_add | L3     | 3 | c0a863ff     | ffffffff     | 5    | ffeeddccbbaa | 000000000000 | 0000
+| table_add | L3     | 4 | c0a8631b     | ffffffff     | e    | aabbccddeeff | 112233445566 | 8888
+| table_add | pppL2  | 3 | ffffffffffff | ffffffffffff | 4    | 1            | 000          | 000
+| table_add | pppL2  | 4 | aabbccddeeff | ffffffffffff | 5    | 2            | 007          | 008
+| table_add | pppL2  | 5 | 112233445566 | ffffffffffff | 4    | 1            | 000          | 000

@@ -18,18 +18,26 @@ void TableInforInit(FlowEntry TableInfor[5]){
     TableInfor[0].key_num = 2;
     TableInfor[0].key_len[0] = 16;
     TableInfor[0].key_len[1] = 8;
+    TableInfor[0].mask_num = 2;
+    TableInfor[0].mask_len[0] = 16;
+    TableInfor[0].mask_len[1] = 8;
     TableInfor[0].value_num = 1;
     TableInfor[0].value_len[0] = 2;
 
     TableInfor[1].key_num = 2;
     TableInfor[1].key_len[0] = 16;
     TableInfor[1].key_len[1] = 16;
+    TableInfor[1].mask_num = 2;
+    TableInfor[1].mask_len[0] = 16;
+    TableInfor[1].mask_len[1] = 16;
     TableInfor[1].value_num = 1;
     TableInfor[1].value_len[0] = 3;
 
     TableInfor[2].key_num = 1;
     TableInfor[2].key_len[0] = 32;
     TableInfor[2].value_num = 4;
+    TableInfor[2].mask_num = 1;
+    TableInfor[2].mask_len[0] = 32;
     TableInfor[2].value_len[0] = 4;
     TableInfor[2].value_len[1] = 48;
     TableInfor[2].value_len[2] = 48;
@@ -37,6 +45,8 @@ void TableInforInit(FlowEntry TableInfor[5]){
 
     TableInfor[3].key_num = 1;
     TableInfor[3].key_len[0] = 48;
+    TableInfor[3].mask_num = 1;
+    TableInfor[3].mask_len[0] = 48;
     TableInfor[3].value_num = 4;
     TableInfor[3].value_len[0] = 3;
     TableInfor[3].value_len[1] = 2;
@@ -45,6 +55,8 @@ void TableInforInit(FlowEntry TableInfor[5]){
 
     TableInfor[4].key_num = 1;
     TableInfor[4].key_len[0] = 48;
+    TableInfor[4].mask_num = 1;
+    TableInfor[4].mask_len[0] = 48;
     TableInfor[4].value_num = 4;
     TableInfor[4].value_len[0] = 3;
     TableInfor[4].value_len[1] = 2;
@@ -114,7 +126,7 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     cnt = 0;
     offset = 0;
     int mask_start = key_end + 1;
-    int mask_end = mask_start + TableInfor[entry->id].key_num - 1;
+    int mask_end = mask_start + TableInfor[entry->id].mask_num - 1;
     int mask_id = mask_end;
     while(mask_id >= mask_start){
         for(i = (int)strlen(com[mask_id]) - 1;i >= 0;i--) {

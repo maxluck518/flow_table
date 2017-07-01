@@ -26,6 +26,8 @@ enum table_operation{
 typedef struct flow_entry_len{
     int key_num;
     int key_len[5];   //bit
+    int mask_num;
+    int mask_len[5];   //bit
     int value_num;
     int value_len[5]; //bit
 }FlowEntry;
