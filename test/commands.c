@@ -9,6 +9,9 @@ void Init(Command *entry,FlowEntry TableInfor[5]){
         entry->mask[i] = 0x00000000;
         entry->value[i] = 0x00000000;
     }
+    key_write_num = 0;
+    mask_write_num = 0;
+    value_write_num = 0;
     TableInforInit(TableInfor);
 }
 void TableInforInit(FlowEntry TableInfor[5]){

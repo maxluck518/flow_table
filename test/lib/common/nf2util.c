@@ -65,7 +65,8 @@ int readReg(struct nf2device *nf2, unsigned reg, unsigned *val)
 	/* get pagesize on the specific device */
 	int  pagesize = getpagesize();
 	/* turn a strig into a unsigned long integer */
-	PHYADDR = reg + DEVICE_ADDRESS;
+	/* PHYADDR = reg + DEVICE_ADDRESS; */
+    PHYADDR = reg;
 	// printf("READ PHYADDR = 0x%08x\n", PHYADDR);
 	length = 1;
 	//printf("length = %d words\n", length);
@@ -251,7 +252,8 @@ int writeReg(struct nf2device *nf2, unsigned reg, unsigned val)
 	int  pagesize = getpagesize();
 
 	/* PHYADDR = reg +0x43d30000; */
-    PHYADDR = reg + DEVICE_ADDRESS;
+    /* PHYADDR = reg + DEVICE_ADDRESS; */
+    PHYADDR = reg;
 	printf("WRITE PHYADDR = 0x%08X\n",PHYADDR);
 	newval = val;
 	//printf("WRITE VAL IS %x and NEWVAL IS %x sizeof char_len is %d\n",val , newval , sizeof(char_len));

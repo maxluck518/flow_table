@@ -1,38 +1,39 @@
 #include "tcam_flow_entry.h"
 
 int InitTcamFlowEntry(Command * entry){
-    /* struct nf2device nf2; */
+    struct nf2device nf2;
 
-    /* nf2.device_name = DEFAULT_IFACE; */
+    nf2.device_name = DEFAULT_IFACE;
+    printf("%s",nf2.device_name);
 
-    /* if (check_iface(&nf2)) */
-    /* { */
-        /* exit(1); */
-    /* } */
-    /* if (openDescriptor(&nf2)) */
-    /* { */
-        /* exit(1); */
-    /* } */
+    if (check_iface(&nf2))
+    {
+        exit(1);
+    }
+    if (openDescriptor(&nf2))
+    {
+        exit(1);
+    }
     uint32_t ph_addr = TableAddr[entry->id];
     uint32_t addr = 0x10;
     uint32_t init_req = 0x20000000;
-    /* writeReg(&nf2, ph_addr + addr, init_req); */
+    writeReg(&nf2, ph_addr + addr, init_req);
     return 0;
 }
 
 int AddTcamFlowEntry(Command * entry){
-    /* struct nf2device nf2; */
+    struct nf2device nf2;
 
-    /* nf2.device_name = DEFAULT_IFACE; */
+    nf2.device_name = DEFAULT_IFACE;
 
-    /* if (check_iface(&nf2)) */
-    /* { */
-        /* exit(1); */
-    /* } */
-    /* if (openDescriptor(&nf2)) */
-    /* { */
-        /* exit(1); */
-    /* } */
+    if (check_iface(&nf2))
+    {
+        exit(1);
+    }
+    if (openDescriptor(&nf2))
+    {
+        exit(1);
+    }
     uint32_t ph_addr = TableAddr[entry->id];
     uint32_t ack_addr = 0x10;
     uint32_t ack_resp_addr = 0x11;
@@ -45,20 +46,20 @@ int AddTcamFlowEntry(Command * entry){
     uint32_t ack_req = 0x10000000 + entry->priority;
     uint32_t ack_resp = 0x00000001;
 
-    /* writeReg(&nf2, ph_addr + vld_addr, vld_req); */
+    writeReg(&nf2, ph_addr + vld_addr, vld_req);
     int i = 0;
     for(i = 0;i<10;i++){
-        /* writeReg(&nf2, ph_addr + key_addr, entry->key[i]); */
-        /* writeReg(&nf2, ph_addr + mask_addr, entry->mask[i]); */
-        /* writeReg(&nf2, ph_addr + value_addr, entry->value[i]); */
+        writeReg(&nf2, ph_addr + key_addr, entry->key[i]);
+        writeReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
+        writeReg(&nf2, ph_addr + value_addr, entry->value[i]);
         key_addr ++;
         mask_addr ++;
         value_addr ++;
     }
     vld_req = 0x00000001;
-    /* writeReg(&nf2, ph_addr + vld_addr, vld_req); */
-    /* writeReg(&nf2, ph_addr + ack_addr, ack_req); */
-    /* writeReg(&nf2, ph_addr + ack_resp_addr, ack_resp); */
+    writeReg(&nf2, ph_addr + vld_addr, vld_req);
+    writeReg(&nf2, ph_addr + ack_addr, ack_req);
+    writeReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
 
     return 0;
 

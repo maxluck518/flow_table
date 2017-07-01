@@ -10,6 +10,9 @@ typedef struct Command{
     uint32_t mask[10];
     uint32_t value[10];
     uint16_t priority;
+    int key_write_num;
+    int mask_write_num;
+    int value_write_num;
 }Command;
 
 void Init(Command *entry,FlowEntry TableInfor[5]);

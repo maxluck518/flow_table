@@ -20,9 +20,10 @@ int main(int argc,int * argv[]){
         entry[i] = (Command *)malloc(sizeof(Command));
         Init(entry[i],TableInfor);
         AddEntry(out[i],entry[i],TableInfor);
-        show(entry[i]);
+        /* show(entry[i]); */
         /* writeReg(); */
-        /* AddTcamFlowEntry(); */
+        InitTcamFlowEntry(entry[i]);
+        AddTcamFlowEntry(entry[i]);
     }
 
 
