@@ -77,7 +77,7 @@ uint8_t CharToHex(char ch){
 }
 int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     int i;
-    for(i = 0;i<OP_NUM+1;i++)    
+    for(i = 0;i<OP_NUM;i++)    
         if(strcmp(com[0],OperationName[i]) == 0){
             switch(i){
                 case 0  : entry->op = nop; break;
@@ -88,7 +88,10 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
             }
             break;
         }
-    for(i = 0;i<TABLE_NUM+1;i++)    
+    if(i == OP_NUM) {
+        printf("Wrong Operation!\n");return 0;
+    }
+    for(i = 0;i<TABLE_NUM;i++)    
         if(strcmp(com[1],TableName[i]) == 0){
             switch(i){
                 case 0  : entry->id = tb_match_QinQ; break;
@@ -100,6 +103,9 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
             }
             break;
         }
+    if(i == TABLE_NUM) {
+        printf("Wrong table!\n");return 0;
+    }
 
     int cnt = 0;
     int offset = 0;
@@ -269,7 +275,7 @@ int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH]
     for(i = 0;i < line_num;i++){
         k = 0;
         char * buf = Commands[i];
-        printf("%s",buf);
+        /* printf("%s",buf); */
         while((out[i][k] = strtok(buf,"|")) != NULL){
             k ++;
             buf = NULL;

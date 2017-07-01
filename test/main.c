@@ -17,12 +17,17 @@ int main(int argc,int * argv[]){
     struct Command * entry[line_num];
     int i = 0;
     int entry_num = 0;
+    int init_flag = 1;
     InitAllTcamTable();
     for(i = 0;i<line_num;i++){
-        entry[i] = (Command *)malloc(sizeof(Command));
-        Init(entry[i],TableInfor);
-        entry_num += AddEntry(out[i],entry[i],TableInfor);
-        show(entry[i]);
+        entry[entry_num] = (Command *)malloc(sizeof(Command));
+        Init(entry[entry_num],TableInfor);
+        if(AddEntry(out[i],entry[entry_num],TableInfor)){
+            show(entry[entry_num]);
+            entry_num ++;
+        }
+        else
+            free(entry[entry_num]);
     }
     for(i = 0;i<entry_num;i++){
         ActivateOperation(entry[i]);

@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <string.h>
 #define TABLE_DEPTH 511
-#define OP_NUM  5
+#define OP_NUM  4
 #define TABLE_NUM 5
 #define MAX_LINE_LEN 5500
 #define MAX_DEPTH 500
