@@ -88,6 +88,7 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
                 case 1  : entry->op = table_init; break;
                 case 2  : entry->op = table_add; break;
                 case 3  : entry->op = table_del; break;
+                case 4  : entry->op = table_search; break;
                 default : printf("Wrong table!\n");return 0;break;
             }
             break;
@@ -110,6 +111,26 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     if(i == TABLE_NUM) {
         printf("Wrong table!\n");return 0;
     }
+
+    int tmp = 0;
+    for(i = 0;i<TableInfor[entry->id].key_num;i++){
+        tmp += TableInfor[entry->id].key_len[i];
+    }
+    if(tmp%32 == 0)
+        entry->key_write_num = tmp/32;
+    else
+        entry->key_write_num = tmp/32 + 1;
+
+    entry->mask_write_num = entry->key_write_num;
+
+    tmp = 0;
+    for(i = 0;i<TableInfor[entry->id].value_num;i++){
+        tmp += TableInfor[entry->id].value_len[i];
+    }
+    if(tmp%32 == 0)
+        entry->value_write_num = tmp/32;
+    else
+        entry->value_write_num = tmp/32 + 1;
 
     int cnt = 0;
     int offset = 0;
@@ -179,25 +200,6 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
         }
         value_id --;
     }
-    int tmp = 0;
-    for(i = 0;i<TableInfor[entry->id].key_num;i++){
-        tmp += TableInfor[entry->id].key_len[i];
-    }
-    if(tmp%32 == 0)
-        entry->key_write_num = tmp/32;
-    else
-        entry->key_write_num = tmp/32 + 1;
-
-    entry->mask_write_num = entry->key_write_num;
-
-    tmp = 0;
-    for(i = 0;i<TableInfor[entry->id].value_num;i++){
-        tmp += TableInfor[entry->id].value_len[i];
-    }
-    if(tmp%32 == 0)
-        entry->value_write_num = tmp/32;
-    else
-        entry->value_write_num = tmp/32 + 1;
     /* printf("%d\t",entry->key_write_num); */
     /* printf("%d\t",entry->mask_write_num); */
     /* printf("%d\n",entry->value_write_num); */

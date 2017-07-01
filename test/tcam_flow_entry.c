@@ -25,11 +25,12 @@ int InitAllTcamTable(){
 }
 int ActivateOperation(Command * entry){
     switch(entry->op){
-        case nop        : break;
-        case table_init : InitTcamFlowEntry(entry);   break;
-        case table_add  : AddTcamFlowEntry(entry);    break;
-        case table_del  : DelTcamFlowEntry(entry);    break;
-        default         : printf("Wrong operation! \n");   break;
+        case nop          : break;
+        case table_init   : InitTcamFlowEntry(entry);   break;
+        case table_add    : AddTcamFlowEntry(entry);    break;
+        case table_del    : DelTcamFlowEntry(entry);    break;
+        case table_search : SearchTcamFlowEntry(entry);   break;
+        default           : printf("Wrong operation! \n");   break;
     }
     return 0;
 }
@@ -51,6 +52,50 @@ int InitTcamFlowEntry(Command * entry){
     uint32_t init_req = 0x20000000;
     writeReg(&nf2, ph_addr + addr, init_req);
     return 0;
+}
+
+int SearchTcamFlowEntry(Command * entry){
+    struct nf2device nf2;
+
+    nf2.device_name = DEFAULT_IFACE;
+
+    if (check_iface(&nf2))
+    {
+        exit(1);
+    }
+    if (openDescriptor(&nf2))
+    {
+        exit(1);
+    }
+
+    uint32_t ph_addr = TableAddr[entry->id];
+    uint32_t ack_addr = 0x10;
+    uint32_t ack_req = entry->priority;
+    uint32_t ack_resp_addr = 0x11;
+    uint32_t ack_resp = 0;
+
+    uint32_t key_addr = 0x14;
+    uint32_t mask_addr = 0x24;
+    uint32_t value_addr = 0x34;
+    int i = 0;
+
+    writeReg(&nf2, ph_addr + ack_addr, ack_req);
+    readReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
+    while(ack_resp != 1){
+        readReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
+    }
+    for(i = 0;i<entry->key_write_num;i++){
+        readReg(&nf2, ph_addr + key_addr, entry->key[i]);
+        key_addr ++;
+    }
+    for(i = 0;i<entry->mask_write_num;i++){
+        readReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
+        mask_addr ++;
+    }
+    for(i = 0;i<entry->value_write_num;i++){
+        readReg(&nf2, ph_addr + value_addr, entry->value[i]);
+        value_addr ++;
+    }
 }
 
 int AddTcamFlowEntry(Command * entry){

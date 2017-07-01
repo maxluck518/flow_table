@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <string.h>
 #define TABLE_DEPTH 511
-#define OP_NUM  4
+#define OP_NUM  5
 #define TABLE_NUM 5
 #define MAX_LINE_LEN 5500
 #define MAX_DEPTH 500
@@ -24,6 +24,7 @@ enum table_operation{
     table_init = 1,
     table_add  = 2,
     table_del  = 3,
+    table_search  = 4,
 };
 
 typedef struct flow_entry_len{
