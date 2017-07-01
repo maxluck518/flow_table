@@ -18,20 +18,26 @@ int main(int argc,int * argv[]){
     int i = 0;
     int entry_num = 0;
     int init_flag = 1;
-    InitAllTcamTable();
+    /* InitAllTcamTable(); */
+    TableInforInit(TableInfor);
     for(i = 0;i<line_num;i++){
         entry[entry_num] = (Command *)malloc(sizeof(Command));
         Init(entry[entry_num],TableInfor);
         if(AddEntry(out[i],entry[entry_num],TableInfor)){
-            show(entry[entry_num]);
+            /* show(entry[entry_num]); */
             entry_num ++;
         }
         else
             free(entry[entry_num]);
     }
+    printf("There are %d table entries ! \n",entry_num);
+    for(i = 0;i<entry_num;i++)
+        display(entry[i],TableInfor);
     for(i = 0;i<entry_num;i++){
         ActivateOperation(entry[i]);
     }
+
+    printf("Activate %d flow entries ! \n",entry_num);
 
     return 0;
 

@@ -12,7 +12,8 @@ void Init(Command *entry,FlowEntry TableInfor[TABLE_NUM]){
     entry->key_write_num = 0;
     entry->mask_write_num = 0;
     entry->value_write_num = 0;
-    TableInforInit(TableInfor);
+    for(i = 0;i<10;i++)
+        entry->split[i] = (char *)malloc(sizeof(char)*20);
 }
 void TableInforInit(FlowEntry TableInfor[TABLE_NUM]){
     TableInfor[0].key_num = 2;
@@ -77,6 +78,9 @@ uint8_t CharToHex(char ch){
 }
 int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     int i;
+    for(i = 0;i<10;i++){
+        strcpy(entry->split[i],com[i]);
+    }
     for(i = 0;i<OP_NUM;i++)    
         if(strcmp(com[0],OperationName[i]) == 0){
             switch(i){
@@ -221,6 +225,23 @@ void show(Command *entry){
     for(i = 0;i<10;i++){
         printf("%x\n",entry->value[i]);
     }
+}
+
+void display(Command *entry,FlowEntry TableInfor[5]){
+    int op_num         = 1;
+    int table_type_num = 1;
+    int priority_num   = 1;
+
+    int key_num   = TableInfor[entry->id].key_num;
+    int mask_num  = TableInfor[entry->id].mask_num;
+    int value_num = TableInfor[entry->id].value_num;
+
+    int num = op_num + table_type_num + priority_num + key_num + mask_num + value_num;
+    int i = 0;
+    for(i = 0;i<num;i++){
+        printf("| %s\t",entry->split[i]);
+    }
+    printf("\n");
 }
 
 int ReadCommandFile(char ** const buff, const unsigned int spec, const char * const filename)
