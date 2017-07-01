@@ -6,6 +6,7 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ADDRESS_DELTA	lib/common/nf2.h	465;"	d
 AUX_LINK_STATUS_POS	lib/common/nf2.h	470;"	d
+ActivateOperation	tcam_flow_entry.c	/^int ActivateOperation(Command * entry){$/;"	f
 AddEntry	commands.c	/^int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){$/;"	f
 AddTcamFlowEntry	tcam_flow_entry.c	/^int AddTcamFlowEntry(Command * entry){$/;"	f
 BOARD_ID	lib/common/nf2.h	195;"	d
@@ -43,7 +44,7 @@ BRAM_OQ_NUM_WORDS_IN_QUEUE_4_REG	lib/common/reg_defines.h	924;"	d
 BRAM_OQ_NUM_WORDS_IN_QUEUE_5_REG	lib/common/reg_defines.h	925;"	d
 BRAM_OQ_NUM_WORDS_IN_QUEUE_6_REG	lib/common/reg_defines.h	926;"	d
 BRAM_OQ_NUM_WORDS_IN_QUEUE_7_REG	lib/common/reg_defines.h	927;"	d
-CC	Makefile	/^CC=gcc$/;"	m
+CC	Makefile	/^CC=arm-xilinx-linux-gnueabi-gcc$/;"	m
 CC	lib/common/Makefile	/^CC = arm-xilinx-linux-gnueabi-gcc$/;"	m
 CC	lib/reg_lib/Makefile	/^CC = gcc$/;"	m
 CFLAGS	lib/reg_lib/Makefile	/^CFLAGS = -g$/;"	m
@@ -444,6 +445,7 @@ DRAM_TEST_LOG_RD_DATA_HI_REG	lib/common/reg_defines.h	590;"	d
 DRAM_TEST_LOG_RD_DATA_LO_REG	lib/common/reg_defines.h	591;"	d
 DRAM_TEST_RAND_SEED_REG	lib/common/reg_defines.h	583;"	d
 DRAM_TEST_STATUS_REG	lib/common/reg_defines.h	580;"	d
+DelTcamFlowEntry	tcam_flow_entry.c	/^int DelTcamFlowEntry(Command * entry){$/;"	f
 ERR_CNET_ERROR	lib/common/nf2.h	207;"	d
 ERR_CNET_READ_TIMEOUT	lib/common/nf2.h	206;"	d
 ERR_DMA_BUF_OVERFLOW	lib/common/nf2.h	212;"	d
@@ -504,7 +506,8 @@ IN_ARB_LAST_PKT_WORD_1_LO_REG	lib/common/reg_defines.h	670;"	d
 IN_ARB_NUM_PKTS_SENT_REG	lib/common/reg_defines.h	666;"	d
 IN_ARB_STATE_REG	lib/common/reg_defines.h	673;"	d
 Init	commands.c	/^void Init(Command *entry,FlowEntry TableInfor[5]){$/;"	f
-InitTcamFlowEntry	tcam_flow_entry.c	/^int InitTcamFlowEntry(uint32_t ph_addr){$/;"	f
+InitAllTcamTable	tcam_flow_entry.c	/^int InitAllTcamTable(){$/;"	f
+InitTcamFlowEntry	tcam_flow_entry.c	/^int InitTcamFlowEntry(Command * entry){$/;"	f
 LDFLAGS	lib/reg_lib/Makefile	/^LDFLAGS = -lnf2regs$/;"	m
 MAC_DISABLE_RX_BIT_NUM	lib/common/reg_defines.h	98;"	d
 MAC_DISABLE_TX_BIT_NUM	lib/common/reg_defines.h	97;"	d
@@ -1316,11 +1319,14 @@ isVirtexProgrammed	lib/common/nf2util_proxy_common.c	/^int isVirtexProgrammed(st
 key	commands.h	/^    uint32_t key[10];$/;"	m	struct:Command
 key_len	defination.h	/^    int key_len[5];   \/\/bit$/;"	m	struct:flow_entry_len
 key_num	defination.h	/^    int key_num;$/;"	m	struct:flow_entry_len
+key_write_num	commands.h	/^    int key_write_num;$/;"	m	struct:Command
 main	lib/reg_lib/client_test.c	/^int main(int argc, char **argv)$/;"	f
 main	lib/reg_lib/reg_proxy_server.c	/^int main(int argc, char** argv) {$/;"	f
-main	main.c	/^int main(){$/;"	f
-main	tcam_flow_entry.c	/^int main()$/;"	f
+main	main.c	/^int main(int argc,int * argv[]){$/;"	f
 mask	commands.h	/^    uint32_t mask[10];$/;"	m	struct:Command
+mask_len	defination.h	/^    int mask_len[5];   \/\/bit$/;"	m	struct:flow_entry_len
+mask_num	defination.h	/^    int mask_num;$/;"	m	struct:flow_entry_len
+mask_write_num	commands.h	/^    int mask_write_num;$/;"	m	struct:Command
 net_iface	lib/common/nf2util.h	/^	int net_iface;$/;"	m	struct:nf2device
 net_iface	lib/common/nft_struct.h	/^	int net_iface;$/;"	m	struct:nf2device
 nf2	lib/reg_lib/client_test.c	/^static struct nf2device nf2;$/;"	v	typeref:struct:nf2device	file:
@@ -1342,7 +1348,7 @@ nf2device	lib/common/nft_struct.h	/^struct nf2device {$/;"	s
 nf2device_id	lib/common/nf2util_proxy_common.c	/^unsigned nf2device_id = -1;$/;"	v
 nf2device_info	lib/common/nf2util_proxy_common.c	/^char nf2device_info[DEVICE_INFO_STR_LEN] = "";$/;"	v
 nf2reg	lib/common/nf2.h	/^struct nf2reg {$/;"	s
-nop	defination.h	/^    nop             = 0,$/;"	e	enum:table_operation
+nop	defination.h	/^    nop        = 0,$/;"	e	enum:table_operation
 ofp_exp_tb_match_type	defination.h	/^enum ofp_exp_tb_match_type {$/;"	g
 op	commands.h	/^    enum table_operation op;$/;"	m	struct:Command	typeref:enum:Command::table_operation
 openDescriptor	lib/common/nf2util.c	/^int openDescriptor(struct nf2device *nf2)$/;"	f
@@ -1369,8 +1375,9 @@ server_ip_addr	lib/common/nft_struct.h	/^    char server_ip_addr[MAX_IPADDR_LEN]
 server_port_num	lib/common/nf2util.h	/^    int server_port_num;$/;"	m	struct:nf2device
 server_port_num	lib/common/nft_struct.h	/^    int server_port_num;$/;"	m	struct:nf2device
 show	commands.c	/^void show(Command *entry){$/;"	f
-table_add	defination.h	/^    table_add       = 1,$/;"	e	enum:table_operation
-table_del	defination.h	/^    table_del       = 2,$/;"	e	enum:table_operation
+table_add	defination.h	/^    table_add  = 2,$/;"	e	enum:table_operation
+table_del	defination.h	/^    table_del  = 3,$/;"	e	enum:table_operation
+table_init	defination.h	/^    table_init = 1,$/;"	e	enum:table_operation
 table_operation	defination.h	/^enum table_operation{$/;"	g
 tb_match_Domain	defination.h	/^    tb_match_Domain     = 1,$/;"	e	enum:ofp_exp_tb_match_type
 tb_match_L3	defination.h	/^    tb_match_L3         = 2,$/;"	e	enum:ofp_exp_tb_match_type
@@ -1382,6 +1389,7 @@ val	lib/common/nf2.h	/^	unsigned int	val;$/;"	m	struct:nf2reg
 value	commands.h	/^    uint32_t value[10];$/;"	m	struct:Command
 value_len	defination.h	/^    int value_len[5]; \/\/bit$/;"	m	struct:flow_entry_len
 value_num	defination.h	/^    int value_num;$/;"	m	struct:flow_entry_len
+value_write_num	commands.h	/^    int value_write_num;$/;"	m	struct:Command
 verbose	lib/reg_lib/client_test.c	/^static int verbose = 0;$/;"	v	file:
 virtex_programmed	lib/common/nf2util_proxy_common.c	/^char virtex_programmed = 0;$/;"	v
 writeReg	lib/common/nf2util.c	/^int writeReg(struct nf2device *nf2, unsigned reg, unsigned val)$/;"	f

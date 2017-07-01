@@ -81,8 +81,9 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
         if(strcmp(com[0],OperationName[i]) == 0){
             switch(i){
                 case 0: entry->op = nop; break;
-                case 1: entry->op = table_add; break;
-                case 2: entry->op = table_del; break;
+                case 1: entry->op = table_init; break;
+                case 2: entry->op = table_add; break;
+                case 3: entry->op = table_del; break;
             }
             break;
         }

@@ -6,7 +6,6 @@
 /* int main(){ */
 int main(int argc,int * argv[]){
     /* char *file = "flow.txt"; */
-    // char *file = "flow.txt.old";
     char *file = argv[1];
     char *com[MAX_DEPTH];
     char *out[MAX_DEPTH][10];
@@ -25,8 +24,10 @@ int main(int argc,int * argv[]){
         AddEntry(out[i],entry[i],TableInfor);
         //        show(entry[i]);
         //        writeReg();
-               //InitTcamFlowEntry(entry[i]);
-        AddTcamFlowEntry(entry[i]); 
+        /* AddTcamFlowEntry(entry[i]);  */
+    }
+    for(i = 0;i<line_num;i++){
+        ActivateOperation(entry[i]);
     }
 
     return 0;

@@ -25,6 +25,15 @@ int InitAllTcamTable(){
     }
     return 0;
 }
+int ActivateOperation(Command * entry){
+    switch(entry->op){
+        case nop        : break;
+        case table_init : InitTcamFlowEntry(entry);   break;
+        case table_add  : AddTcamFlowEntry(entry);    break;
+        case table_del  : DelTcamFlowEntry(entry);    break;
+    }
+    return 0;
+}
 int InitTcamFlowEntry(Command * entry){
     struct nf2device nf2;
 
@@ -98,7 +107,7 @@ int AddTcamFlowEntry(Command * entry){
 
 }
 
-/* int DelTcamFlowEntry(Command * entry,uint32_t ph_addr){ */
-
-/* } */
+int DelTcamFlowEntry(Command * entry){
+    return 0;
+}
 

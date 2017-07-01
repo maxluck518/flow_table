@@ -18,9 +18,10 @@ enum ofp_exp_tb_match_type {
 };
 
 enum table_operation{
-    nop             = 0,
-    table_add       = 1,
-    table_del       = 2,
+    nop        = 0,
+    table_init = 1,
+    table_add  = 2,
+    table_del  = 3,
 };
 
 typedef struct flow_entry_len{

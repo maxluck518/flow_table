@@ -20,5 +20,7 @@
 int InitAllTcamTable();
 int InitTcamFlowEntry(Command * entry);
 int AddTcamFlowEntry(Command * entry);
+int DelTcamFlowEntry(Command * entry);
+int ActivateOperation(Command * entry);
 
 #endif
