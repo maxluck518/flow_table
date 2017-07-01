@@ -1,6 +1,6 @@
 #include "tcam_flow_entry.h"
 
-int InitALLTcamTable(){
+int InitAllTcamTable(){
     struct nf2device nf2;
 
     nf2.device_name = DEFAULT_IFACE;
@@ -10,7 +10,6 @@ int InitALLTcamTable(){
     {
         exit(1);
     }
-    printf("begin: \n");
     if (openDescriptor(&nf2))
     {
         exit(1);

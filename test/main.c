@@ -1,4 +1,5 @@
 #include "commands.h"
+#include "tcam_flow_entry.h"
 /* int AddTcamFlowEntry(uint32_t key[10],uint32_t mask[10],uint32_t value[10],uint32_t addr){ */
 /* } */
 
@@ -16,18 +17,17 @@ int main(int argc,int * argv[]){
     TransferCommands(com,line_num,out);
     struct Command * entry[line_num];
     int i = 0;
-    /* InitTcamFlowEntry(); */
+    InitAllTcamTable();
     for(i = 0;i<line_num;i++){
         entry[i] = (Command *)malloc(sizeof(Command));
         Init(entry[i],TableInfor);
         printf("entry %d :\t",i);
         AddEntry(out[i],entry[i],TableInfor);
-//        show(entry[i]);
-        /* writeReg(); */
-	//        InitTcamFlowEntry(entry[i]);
-	AddTcamFlowEntry(entry[i]); 
+        //        show(entry[i]);
+        //        writeReg();
+               //InitTcamFlowEntry(entry[i]);
+        AddTcamFlowEntry(entry[i]); 
     }
-
 
     return 0;
 
