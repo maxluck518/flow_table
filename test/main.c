@@ -16,6 +16,7 @@ int main(int argc,int * argv[]){
     TransferCommands(com,line_num,out);
     struct Command * entry[line_num];
     int i = 0;
+    /* InitTcamFlowEntry(); */
     for(i = 0;i<line_num;i++){
         entry[i] = (Command *)malloc(sizeof(Command));
         Init(entry[i],TableInfor);
@@ -23,8 +24,8 @@ int main(int argc,int * argv[]){
         AddEntry(out[i],entry[i],TableInfor);
         /* show(entry[i]); */
         /* writeReg(); */
-        /* InitTcamFlowEntry(entry[i]); */
-        /* AddTcamFlowEntry(entry[i]); */
+	//        InitTcamFlowEntry(entry[i]);
+        AddTcamFlowEntry(entry[i]);
     }
 
 

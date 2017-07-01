@@ -17,7 +17,7 @@
 
 #define DEFAULT_IFACE	"mem"
 #define READ_TEST       0x0000040
-
+int InitAllTcamTable();
 int InitTcamFlowEntry(Command * entry);
 int AddTcamFlowEntry(Command * entry);
 

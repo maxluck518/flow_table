@@ -1,5 +1,31 @@
 #include "tcam_flow_entry.h"
 
+int InitALLTcamTable(){
+    struct nf2device nf2;
+
+    nf2.device_name = DEFAULT_IFACE;
+    printf("%s",nf2.device_name);
+
+    if (check_iface(&nf2))
+    {
+        exit(1);
+    }
+    printf("begin: \n");
+    if (openDescriptor(&nf2))
+    {
+        exit(1);
+    }
+    int i = 0;
+    uint32_t ph_addr;
+    uint32_t addr = 0x10;
+    uint32_t init_req = 0x20000000;
+    for(i = 0;i<5;i++){
+        ph_addr = TableAddr[i];
+        writeReg(&nf2, ph_addr + addr, init_req);
+        printf("over: %d",i);
+    }
+    return 0;
+}
 int InitTcamFlowEntry(Command * entry){
     struct nf2device nf2;
 
