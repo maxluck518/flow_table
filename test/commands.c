@@ -1,6 +1,6 @@
 #include "commands.h"
 
-void Init(Command *entry,FlowEntry TableInfor[5]){
+void Init(Command *entry,FlowEntry TableInfor[TABLE_NUM]){
     entry->op = nop;
     entry->id = tb_match_QinQ;
     int i = 0;
@@ -14,7 +14,7 @@ void Init(Command *entry,FlowEntry TableInfor[5]){
     entry->value_write_num = 0;
     TableInforInit(TableInfor);
 }
-void TableInforInit(FlowEntry TableInfor[5]){
+void TableInforInit(FlowEntry TableInfor[TABLE_NUM]){
     TableInfor[0].key_num = 2;
     TableInfor[0].key_len[0] = 16;
     TableInfor[0].key_len[1] = 8;
@@ -77,7 +77,7 @@ uint8_t CharToHex(char ch){
 }
 int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     int i;
-    for(i = 0;i<3;i++)    
+    for(i = 0;i<OP_NUM;i++)    
         if(strcmp(com[0],OperationName[i]) == 0){
             switch(i){
                 case 0: entry->op = nop; break;
@@ -87,7 +87,7 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
             }
             break;
         }
-    for(i = 0;i<5;i++)    
+    for(i = 0;i<TABLE_NUM;i++)    
         if(strcmp(com[1],TableName[i]) == 0){
             switch(i){
                 case 0 : entry->id = tb_match_QinQ; break;
@@ -186,9 +186,9 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
         entry->value_write_num = tmp/32;
     else
         entry->value_write_num = tmp/32 + 1;
-    printf("%d\t",entry->key_write_num);
-    printf("%d\t",entry->mask_write_num);
-    printf("%d\n",entry->value_write_num);
+    /* printf("%d\t",entry->key_write_num); */
+    /* printf("%d\t",entry->mask_write_num); */
+    /* printf("%d\n",entry->value_write_num); */
 
     return 0;
 }

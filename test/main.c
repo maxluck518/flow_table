@@ -20,11 +20,8 @@ int main(int argc,int * argv[]){
     for(i = 0;i<line_num;i++){
         entry[i] = (Command *)malloc(sizeof(Command));
         Init(entry[i],TableInfor);
-        printf("entry %d :\t",i);
         AddEntry(out[i],entry[i],TableInfor);
-        //        show(entry[i]);
-        //        writeReg();
-        /* AddTcamFlowEntry(entry[i]);  */
+        show(entry[i]);
     }
     for(i = 0;i<line_num;i++){
         ActivateOperation(entry[i]);

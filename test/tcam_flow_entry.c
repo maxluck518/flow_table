@@ -4,7 +4,6 @@ int InitAllTcamTable(){
     struct nf2device nf2;
 
     nf2.device_name = DEFAULT_IFACE;
-    printf("%s",nf2.device_name);
 
     if (check_iface(&nf2))
     {
@@ -21,7 +20,6 @@ int InitAllTcamTable(){
     for(i = 0;i<5;i++){
         ph_addr = TableAddr[i];
         writeReg(&nf2, ph_addr + addr, init_req);
-        printf("over: %d",i);
     }
     return 0;
 }
@@ -38,7 +36,6 @@ int InitTcamFlowEntry(Command * entry){
     struct nf2device nf2;
 
     nf2.device_name = DEFAULT_IFACE;
-    printf("%s",nf2.device_name);
 
     if (check_iface(&nf2))
     {
@@ -80,7 +77,7 @@ int AddTcamFlowEntry(Command * entry){
     uint32_t ack_req = 0x10000000 + entry->priority;
     uint32_t ack_resp = 0x00000001;
 
-    writeReg(&nf2, ph_addr + vld_addr, vld_req);
+    /* writeReg(&nf2, ph_addr + vld_addr, vld_req); */
     int i = 0;
     /* write key */
     for(i = 0;i<entry->key_write_num;i++){
@@ -100,7 +97,7 @@ int AddTcamFlowEntry(Command * entry){
     vld_req = 0x00000001;
     writeReg(&nf2, ph_addr + vld_addr, vld_req);
     writeReg(&nf2, ph_addr + ack_addr, ack_req);
-    writeReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
+    /* writeReg(&nf2, ph_addr + ack_resp_addr, ack_resp); */
 
     return 0;
 
@@ -108,6 +105,28 @@ int AddTcamFlowEntry(Command * entry){
 }
 
 int DelTcamFlowEntry(Command * entry){
+    struct nf2device nf2;
+
+    nf2.device_name = DEFAULT_IFACE;
+    printf("delete!\n");
+
+    if (check_iface(&nf2))
+    {
+        exit(1);
+    }
+    if (openDescriptor(&nf2))
+    {
+        exit(1);
+    }
+    uint32_t ph_addr = TableAddr[entry->id];
+    uint32_t ack_addr = 0x10;
+    uint32_t ack_req = 0x10000000 + entry->priority;
+    uint32_t vld_addr = 0x13;
+    uint32_t vld_req = 0x00000000;
+
+    writeReg(&nf2, ph_addr + vld_addr, vld_req);
+    writeReg(&nf2, ph_addr + ack_addr, ack_req);
+
     return 0;
 }
 

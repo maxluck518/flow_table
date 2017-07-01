@@ -6,6 +6,8 @@
 #include <stdint.h>
 #include <string.h>
 #define TABLE_DEPTH 511
+#define OP_NUM  5
+#define TABLE_NUM 5
 #define MAX_LINE_LEN 5500
 #define MAX_DEPTH 500
 
@@ -34,7 +36,7 @@ typedef struct flow_entry_len{
 }FlowEntry;
 
 static char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};
-static char* OperationName[3] = {"nop","table_add","table_del"};
+static char* OperationName[4] = {"nop","table_init","table_add","table_del"};
 static uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};
 
 #endif

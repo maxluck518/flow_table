@@ -14,3 +14,4 @@
 | table_add | pppL2  | 5 | 112233445566 | ffffffffffff | 4    | 1            | 000          | 000
 | table_add | pppL2  | 6 | 112233112233 | ffffffffffff | 4    | 0            | 003          | 004
 | table_add | extL2  | 3 | ffeeddccbbaa | ffffffffffff | 4    | 3            | 000          | 000
+| table_add | extL2  | 4 | ffffffffffff | ffffffffffff | 4    | 3            | 000          | 000
