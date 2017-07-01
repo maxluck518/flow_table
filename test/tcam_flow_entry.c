@@ -29,6 +29,7 @@ int ActivateOperation(Command * entry){
         case table_init : InitTcamFlowEntry(entry);   break;
         case table_add  : AddTcamFlowEntry(entry);    break;
         case table_del  : DelTcamFlowEntry(entry);    break;
+        default         : printf("Wrong operation! \n");   break;
     }
     return 0;
 }

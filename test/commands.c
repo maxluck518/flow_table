@@ -77,24 +77,26 @@ uint8_t CharToHex(char ch){
 }
 int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     int i;
-    for(i = 0;i<OP_NUM;i++)    
+    for(i = 0;i<OP_NUM+1;i++)    
         if(strcmp(com[0],OperationName[i]) == 0){
             switch(i){
-                case 0: entry->op = nop; break;
-                case 1: entry->op = table_init; break;
-                case 2: entry->op = table_add; break;
-                case 3: entry->op = table_del; break;
+                case 0  : entry->op = nop; break;
+                case 1  : entry->op = table_init; break;
+                case 2  : entry->op = table_add; break;
+                case 3  : entry->op = table_del; break;
+                default : printf("Wrong table!\n");return 0;break;
             }
             break;
         }
-    for(i = 0;i<TABLE_NUM;i++)    
+    for(i = 0;i<TABLE_NUM+1;i++)    
         if(strcmp(com[1],TableName[i]) == 0){
             switch(i){
-                case 0 : entry->id = tb_match_QinQ; break;
-                case 1 : entry->id = tb_match_Domain; break;
-                case 2 : entry->id = tb_match_L3; break;
-                case 3 : entry->id = tb_match_pppL2; break;
-                case 4 : entry->id = tb_match_extL2; break;
+                case 0  : entry->id = tb_match_QinQ; break;
+                case 1  : entry->id = tb_match_Domain; break;
+                case 2  : entry->id = tb_match_L3; break;
+                case 3  : entry->id = tb_match_pppL2; break;
+                case 4  : entry->id = tb_match_extL2; break;
+                default : printf("Wrong Operation!\n");return 0;break;
             }
             break;
         }
@@ -190,7 +192,7 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
     /* printf("%d\t",entry->mask_write_num); */
     /* printf("%d\n",entry->value_write_num); */
 
-    return 0;
+    return 1;
 }
 
 void show(Command *entry){
@@ -258,35 +260,6 @@ void ModifyCommands(char * com,int tos){
     if(i != len )
         com++[i] = '\0';
 }
-
-/* int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[10]){ */
-    /* int i; */
-    /* int k = 0; */
-    /* memset(out,0,sizeof(char *)*10); */
-    /* for(i = 0;i < line_num;i++){ */
-        /* char * buf = Commands[i]; */
-        /* printf("%s",buf); */
-        /* while((out[k] = strtok(buf,"|")) != NULL){ */
-            /* k ++; */
-            /* buf = NULL; */
-        /* } */
-        /* for(i = k;i<10;i++){ */
-            /* out[i] = "NULL"; */
-        /* } */
-        /* for(i = 0;i<k;i++){ */
-            /* int cnt = 0; */
-            /* while(out[i][cnt] == ' '){ */
-                /* cnt ++; */
-            /* } */
-            /* ModifyCommands(out[i],cnt); */
-        /* } */
-    /* } */
-    /* [> for(i = 0;i<10;i++){ <] */
-        /* [> printf("%s\t",out[i]); <] */
-        /* [> printf("%d\n",(int)strlen(out[i])); <] */
-    /* [> } <] */
-    /* return 0; */
-/* } */
 
 int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][10]){
     int i;
