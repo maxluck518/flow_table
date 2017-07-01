@@ -9,9 +9,9 @@ void Init(Command *entry,FlowEntry TableInfor[5]){
         entry->mask[i] = 0x00000000;
         entry->value[i] = 0x00000000;
     }
-    key_write_num = 0;
-    mask_write_num = 0;
-    value_write_num = 0;
+    entry->key_write_num = 0;
+    entry->mask_write_num = 0;
+    entry->value_write_num = 0;
     TableInforInit(TableInfor);
 }
 void TableInforInit(FlowEntry TableInfor[5]){
@@ -154,6 +154,29 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
         }
         value_id --;
     }
+    int tmp = 0;
+    for(i = 0;i<TableInfor[entry->id].key_num;i++){
+        tmp += TableInfor[entry->id].key_len[i];
+    }
+    if(tmp%32 == 0)
+        entry->key_write_num = tmp/32;
+    else
+        entry->key_write_num = tmp/32 + 1;
+
+    entry->mask_write_num = entry->key_write_num;
+
+    tmp = 0;
+    for(i = 0;i<TableInfor[entry->id].value_num;i++){
+        tmp += TableInfor[entry->id].value_len[i];
+    }
+    if(tmp%32 == 0)
+        entry->value_write_num = tmp/32;
+    else
+        entry->value_write_num = tmp/32 + 1;
+    printf("%d\t",entry->key_write_num);
+    printf("%d\t",entry->mask_write_num);
+    printf("%d\n",entry->value_write_num);
+
     return 0;
 }
 

@@ -48,12 +48,19 @@ int AddTcamFlowEntry(Command * entry){
 
     writeReg(&nf2, ph_addr + vld_addr, vld_req);
     int i = 0;
-    for(i = 0;i<10;i++){
+    /* write key */
+    for(i = 0;i<entry->key_write_num;i++){
         writeReg(&nf2, ph_addr + key_addr, entry->key[i]);
-        writeReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
-        writeReg(&nf2, ph_addr + value_addr, entry->value[i]);
         key_addr ++;
+    }
+    /* write mask */
+    for(i = 0;i<entry->mask_write_num;i++){
+        writeReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
         mask_addr ++;
+    }
+    /* write value */
+    for(i = 0;i<entry->value_write_num;i++){
+        writeReg(&nf2, ph_addr + value_addr, entry->value[i]);
         value_addr ++;
     }
     vld_req = 0x00000001;

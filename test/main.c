@@ -19,11 +19,12 @@ int main(int argc,int * argv[]){
     for(i = 0;i<line_num;i++){
         entry[i] = (Command *)malloc(sizeof(Command));
         Init(entry[i],TableInfor);
+        printf("entry %d :\t",i);
         AddEntry(out[i],entry[i],TableInfor);
         /* show(entry[i]); */
         /* writeReg(); */
-        InitTcamFlowEntry(entry[i]);
-        AddTcamFlowEntry(entry[i]);
+        /* InitTcamFlowEntry(entry[i]); */
+        /* AddTcamFlowEntry(entry[i]); */
     }
 
 
