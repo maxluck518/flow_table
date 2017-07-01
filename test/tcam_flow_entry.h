@@ -18,6 +18,7 @@
 #define DEFAULT_IFACE	"mem"
 #define READ_TEST       0x0000040
 
-int AddTcamFlowEntry(Command * entry,uint32_t ph_addr);
+int InitTcamFlowEntry(Command * entry);
+int AddTcamFlowEntry(Command * entry);
 
 #endif
