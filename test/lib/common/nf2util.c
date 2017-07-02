@@ -137,7 +137,8 @@ int readReg(struct nf2device *nf2, unsigned reg, unsigned *val)
 	c1 = (unsigned int)map_base[pgoffset + 1];
 	c2 = (unsigned int)map_base[pgoffset + 2];
 	c3 = (unsigned int)map_base[pgoffset + 3];
-	*val = c3*0x1000000 + c2*0x10000 + c1*0x100 + c0;
+	/* *val = c3*0x1000000 + c2*0x10000 + c1*0x100 + c0; */
+	*val = (c3 << 6) + (c2 << 4) +(c1 << 2) + c0;
 	printf("c0 is %x , c1 is %x , c2 is %x , c3 is %x \n",c0,c1,c2,c3);
 	printf("val is %x\n", *val);
 	//printf("\n");

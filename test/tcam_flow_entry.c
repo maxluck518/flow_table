@@ -72,28 +72,45 @@ int SearchTcamFlowEntry(Command * entry){
     uint32_t ack_addr = 0x10;
     uint32_t ack_req = entry->priority;
     uint32_t ack_resp_addr = 0x11;
-    uint32_t ack_resp = 0;
+    uint32_t ack_resp = 0x0;
 
     uint32_t key_addr = 0x14;
     uint32_t mask_addr = 0x24;
     uint32_t value_addr = 0x34;
     int i = 0;
 
-    writeReg(&nf2, ph_addr + ack_addr, ack_req);
-    readReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
-    while(ack_resp != 1){
-        readReg(&nf2, ph_addr + ack_resp_addr, ack_resp);
-    }
     for(i = 0;i<entry->key_write_num;i++){
-        readReg(&nf2, ph_addr + key_addr, entry->key[i]);
+        writeReg(&nf2, ph_addr + key_addr, entry->key[i]);
         key_addr ++;
     }
     for(i = 0;i<entry->mask_write_num;i++){
-        readReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
+        writeReg(&nf2, ph_addr + mask_addr, entry->mask[i]);
         mask_addr ++;
     }
     for(i = 0;i<entry->value_write_num;i++){
-        readReg(&nf2, ph_addr + value_addr, entry->value[i]);
+        writeReg(&nf2, ph_addr + value_addr, entry->value[i]);
+        value_addr ++;
+    }
+    key_addr = 0x14;
+    mask_addr = 0x24;
+    value_addr = 0x34;
+
+    writeReg(&nf2, ph_addr + ack_addr, ack_req);
+    readReg(&nf2, ph_addr + ack_resp_addr, &ack_resp);
+    printf("test! \n");
+    while(ack_resp == 0){
+        readReg(&nf2, ph_addr + ack_resp_addr, &ack_resp);
+    }
+    for(i = 0;i<entry->key_write_num;i++){
+        readReg(&nf2, ph_addr + key_addr, &entry->key[i]);
+        key_addr ++;
+    }
+    for(i = 0;i<entry->mask_write_num;i++){
+        readReg(&nf2, ph_addr + mask_addr, &entry->mask[i]);
+        mask_addr ++;
+    }
+    for(i = 0;i<entry->value_write_num;i++){
+        readReg(&nf2, ph_addr + value_addr, &entry->value[i]);
         value_addr ++;
     }
 }
