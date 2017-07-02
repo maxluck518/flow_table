@@ -1,12 +1,12 @@
 #include "commands.h"
-#include "tcam_flow_entry.h"
+/* #include "tcam_flow_entry.h" */
 /* int AddTcamFlowEntry(uint32_t key[10],uint32_t mask[10],uint32_t value[10],uint32_t addr){ */
 /* } */
 
-/* int main(){ */
-int main(int argc,int * argv[]){
-    /* char *file = "flow.txt"; */
-    char *file = argv[1];
+int main(){
+/* int main(int argc,int * argv[]){ */
+    char *file = "icmp.txt";
+    /* char *file = argv[1]; */
     char *com[MAX_DEPTH];
     char *out[MAX_DEPTH][10];
     int line_num;
@@ -33,9 +33,9 @@ int main(int argc,int * argv[]){
     printf("There are %d table entries ! \n",entry_num);
     for(i = 0;i<entry_num;i++)
         display(entry[i],TableInfor);
-    for(i = 0;i<entry_num;i++){
-        ActivateOperation(entry[i]);
-    }
+    /* for(i = 0;i<entry_num;i++){ */
+        /* ActivateOperation(entry[i]); */
+    /* } */
 
     printf("Activate %d flow entries ! \n",entry_num);
 

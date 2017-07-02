@@ -18,6 +18,8 @@ enum ofp_exp_tb_match_type {
     tb_match_pppL2      = 3,
     tb_match_extL2      = 4,
 };
+static char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};
+static uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};
 
 enum table_operation{
     nop        = 0,
@@ -26,6 +28,7 @@ enum table_operation{
     table_del  = 3,
     table_search  = 4,
 };
+static char* OperationName[5] = {"nop","table_init","table_add","table_del", "table_search" };
 
 typedef struct flow_entry_len{
     int key_num;
@@ -36,8 +39,5 @@ typedef struct flow_entry_len{
     int value_len[5]; //bit
 }FlowEntry;
 
-static char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};
-static char* OperationName[4] = {"nop","table_init","table_add","table_del"};
-static uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};
 
 #endif
