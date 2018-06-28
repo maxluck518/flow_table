@@ -7,9 +7,10 @@
 #include <string.h>
 #define TABLE_DEPTH 511
 #define OP_NUM  5
-#define TABLE_NUM 5
+#define TABLE_NUM 6
 #define MAX_LINE_LEN 5500
 #define MAX_DEPTH 500
+#define MAX_COMMANDS_LENGTH 20 
 
 enum ofp_exp_tb_match_type {
     tb_match_QinQ       = 0,
@@ -17,9 +18,10 @@ enum ofp_exp_tb_match_type {
     tb_match_L3         = 2,
     tb_match_pppL2      = 3,
     tb_match_extL2      = 4,
+    tb_match_my_table   = 5,
 };
-static char* TableName[5] = {"qinq","domain","L3","pppL2","extL2"};
-static uint32_t TableAddr[5] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000};
+static char* TableName[6] = {"qinq","domain","L3","pppL2","extL2","mytable"};
+static uint32_t TableAddr[6] = {0x43d40000,0x43d00000,0x43d20000,0x43d30000,0x43d10000,0x43e00000};
 
 enum table_operation{
     nop        = 0,

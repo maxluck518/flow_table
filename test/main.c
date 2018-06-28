@@ -5,12 +5,12 @@
 
 /* int main(){ */
 int main(int argc,int * argv[]){
-    /* char *file = "icmp.txt"; */
+    /* char *file = "test.txt"; */
     char *file = argv[1];
     char *com[MAX_DEPTH];
-    char *out[MAX_DEPTH][10];
+    char *out[MAX_DEPTH][MAX_COMMANDS_LENGTH];
     int line_num;
-    FlowEntry TableInfor[5];
+    FlowEntry TableInfor[TABLE_NUM];
 
     line_num = ReadCommandFile(com,MAX_DEPTH,file);
     TransferCommands(com,line_num,out);
@@ -32,7 +32,9 @@ int main(int argc,int * argv[]){
     }
     printf("There are %d table entries ! \n",entry_num);
     for(i = 0;i<entry_num;i++)
-        display(entry[i],TableInfor);
+        /* display(entry[i],TableInfor); */
+
+    /* build for arm  */
     for(i = 0;i<entry_num;i++){
         ActivateOperation(entry[i]);
     }

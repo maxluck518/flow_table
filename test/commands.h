@@ -12,21 +12,21 @@ typedef struct Command{
     int key_write_num;
     int mask_write_num;
     int value_write_num;
-    char *split[10];
+    char *split[20];
 }Command;
 
-void Init(Command *entry,FlowEntry TableInfor[5]);
-void TableInforInit(FlowEntry TableInfor[5]);
+void Init(Command *entry,FlowEntry TableInfor[TABLE_NUM]);
+void TableInforInit(FlowEntry TableInfor[TABLE_NUM]);
 uint8_t CharToHex(char ch);
-int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]);
+int AddEntry(char * com[MAX_COMMANDS_LENGTH],Command *entry,FlowEntry TableInfor[TABLE_NUM]);
 void show(Command *entry);
-void display(Command *entry,FlowEntry TableInfor[5]);
+void display(Command *entry,FlowEntry TableInfor[TABLE_NUM]);
 
 int ReadCommandFile(char ** const buff, const unsigned int spec, const char * const filename);
 
 
 void ModifyCommands(char * com,int tos);
 
-int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][10]);
+int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][MAX_COMMANDS_LENGTH]);
 
 #endif

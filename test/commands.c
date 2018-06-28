@@ -9,11 +9,12 @@ void Init(Command *entry,FlowEntry TableInfor[TABLE_NUM]){
         entry->mask[i] = 0x00000000;
         entry->value[i] = 0x00000000;
     }
+    entry->priority = 0;
     entry->key_write_num = 0;
     entry->mask_write_num = 0;
     entry->value_write_num = 0;
-    for(i = 0;i<10;i++)
-        entry->split[i] = (char *)malloc(sizeof(char)*20);
+    for(i = 0;i<MAX_COMMANDS_LENGTH;i++)
+        entry->split[i] = (char *)malloc(sizeof(char)*30);
 }
 void TableInforInit(FlowEntry TableInfor[TABLE_NUM]){
     TableInfor[0].key_num = 2;
@@ -63,6 +64,23 @@ void TableInforInit(FlowEntry TableInfor[TABLE_NUM]){
     TableInfor[4].value_len[1] = 2;
     TableInfor[4].value_len[2] = 12;
     TableInfor[4].value_len[3] = 12;
+
+    TableInfor[5].key_num = 6;
+    TableInfor[5].key_len[0] = 8;
+    TableInfor[5].key_len[1] = 32;
+    TableInfor[5].key_len[2] = 32;
+    TableInfor[5].key_len[3] = 8;
+    TableInfor[5].key_len[4] = 16;
+    TableInfor[5].key_len[5] = 16;
+    TableInfor[5].mask_num = 6;
+    TableInfor[5].mask_len[0] = 8;
+    TableInfor[5].mask_len[1] = 32;
+    TableInfor[5].mask_len[2] = 32;
+    TableInfor[5].mask_len[3] = 8;
+    TableInfor[5].mask_len[4] = 16;
+    TableInfor[5].mask_len[5] = 16;
+    TableInfor[5].value_num = 1;
+    TableInfor[5].value_len[0] = 8;
 }
 uint8_t CharToHex(char ch){
     uint8_t hex;
@@ -76,9 +94,9 @@ uint8_t CharToHex(char ch){
         hex = 0x10;
     return hex;
 }
-int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
+int AddEntry(char * com[MAX_COMMANDS_LENGTH],Command *entry,FlowEntry TableInfor[TABLE_NUM]){
     int i;
-    for(i = 0;i<10;i++){
+    for(i = 0;i<MAX_COMMANDS_LENGTH;i++){
         strcpy(entry->split[i],com[i]);
     }
     for(i = 0;i<OP_NUM;i++)    
@@ -104,6 +122,7 @@ int AddEntry(char * com[10],Command *entry,FlowEntry TableInfor[5]){
                 case 2  : entry->id = tb_match_L3; break;
                 case 3  : entry->id = tb_match_pppL2; break;
                 case 4  : entry->id = tb_match_extL2; break;
+                case 5  : entry->id = tb_match_my_table; break;
                 default : printf("Wrong Operation!\n");return 0;break;
             }
             break;
@@ -229,7 +248,7 @@ void show(Command *entry){
     }
 }
 
-void display(Command *entry,FlowEntry TableInfor[5]){
+void display(Command *entry,FlowEntry TableInfor[TABLE_NUM]){
     int op_num         = 1;
     int table_type_num = 1;
     int priority_num   = 1;
@@ -240,6 +259,7 @@ void display(Command *entry,FlowEntry TableInfor[5]){
 
     int num = op_num + table_type_num + priority_num + key_num + mask_num + value_num;
     int i = 0;
+    printf("%d \n ",num);
     for(i = 0;i<num;i++){
         printf("| %s\t",entry->split[i]);
     }
@@ -290,11 +310,11 @@ void ModifyCommands(char * com,int tos){
         com++[i] = '\0';
 }
 
-int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][10]){
+int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH][MAX_COMMANDS_LENGTH]){
     int i;
     int m;
     int k = 0;
-    memset(out,0,sizeof(char *)*10);
+    memset(out,0,sizeof(char *)*MAX_COMMANDS_LENGTH);
     for(i = 0;i < line_num;i++){
         k = 0;
         char * buf = Commands[i];
@@ -303,7 +323,7 @@ int TransferCommands(char *Commands[MAX_DEPTH],int line_num,char *out[MAX_DEPTH]
             k ++;
             buf = NULL;
         }
-        for(m = k;m<10;m++){
+        for(m = k;m<MAX_COMMANDS_LENGTH;m++){
             out[i][m] = "NULL";
         }
         for(m = 0;m<k;m++){
